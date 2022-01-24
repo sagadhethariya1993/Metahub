@@ -1,0 +1,164 @@
+/* ================================
+       11.4. Tabs
+       ================================ */
+
+       .tabs-list {
+        list-style:none;
+        display: flex;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .tabs-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 35px;
+        opacity: 0.5;
+    }
+    
+    .tabs-list li .count {
+        color: var(--primary-accent-color);
+        font-weight: var(--heading-font-weight);
+    }
+    
+    .tabs-list li a {
+        font-size: 16px;
+        font-weight: var(--heading-font-weight);
+        letter-spacing: var(--letter-spacing);
+        display: block;
+        padding: 14px 0;
+        white-space: nowrap;
+        border-bottom: 2px solid transparent;
+    }
+    
+    .tabs-list li.active {
+        color: var(--main-font-color);
+        opacity: 1;
+    }
+    
+    .tabs-list li.active a {
+        border-bottom: 2px solid var(--main-font-color);
+    }
+    
+    .tab-content {
+        padding-top: 40px;
+    }
+    
+    .tab {
+        display: none;
+    }
+    
+    .tab.active {
+        display: block;
+    }
+    
+    .tabs-block.swiper-container {
+        position: relative;
+    }
+    
+    .tabs-block li.swiper-slide {
+        width: auto;
+    }
+    
+    .tabs-block .swiper-nav,
+    .tabs-block .swiper-nav .swiper-button-next,
+    .tabs-block .swiper-nav .swiper-button-prev {
+        display: none;
+    }
+    
+    .tabs-block .swiper-nav .swiper-button-next .next-button,
+    .tabs-block .swiper-nav .swiper-button-prev .prev-button {
+        width: 8px;
+        height: 12px;
+        fill: var(--main-font-color);
+    }
+    
+    .tabs-block .swipper-nav .swiper-button-next:hover svg,
+    .tabs-block .swipper-nav .swiper-button-prev:hover svg {
+        fill: var(--primary-accent-color);
+    }
+    
+    .tabs-block .swiper-nav .swiper-button-prev::before,
+    .tabs-block .swiper-nav .swiper-button-next::before,
+    .tabs-block .swiper-nav .swiper-button-prev::after,
+    .tabs-block .swiper-nav .swiper-button-next::after  {
+        content: '';
+    }
+    
+    @media (max-width: 800px) {
+        .tabs-block {
+            position: relative;
+        }
+    
+        .tabs-block.swiper-container .swiper-nav {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 800px;
+            max-width: 100%;
+            top: 33px;
+        }
+    
+        .tabs-block.swiper-container .swiper-nav .swiper-button-next,
+        .tabs-block.swiper-container .swiper-nav .swiper-button-prev {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 40px;
+        }
+    
+        .tabs-block.swiper-container .swiper-nav .swiper-button-next {
+            right: 0;
+            left: auto;
+        }
+    
+        .tabs-block.swiper-container .swiper-nav .swiper-button-prev {
+            left: 0;
+            right: auto;
+        }
+    
+    
+        .tabs-block.swiper-container .swiper-nav > * {
+            background-color: var(--body-background);
+            z-index: 10;
+        }
+    
+        .tabs-list {
+            border-bottom: none;
+        }
+    
+        .tabs-list li {
+            justify-content: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+    
+        .tabs-block.swiper-container .tabs-list li.swiper-slide {
+            width: auto;
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility 0s linear 0s, opacity 0.3s linear;
+        }
+    
+        .tabs-block.swiper-container .tabs-list li.swiper-slide-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    
+        .tabs-block.swiper-container .tabs-list li.swiper-slide {
+            margin-right: 0;
+        }
+        .tab-content {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    .tabs-list li.active a {
+        border-bottom: 2px solid var(--main-font-color);
+    }
+    @media(max-width: 1024px) {
+        .product-version-1 .product-media {
+            padding-top: 0;
+        }
+    }
+    

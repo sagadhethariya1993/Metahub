@@ -1,0 +1,202 @@
+/* ================================
+       18. CREATORS
+       ================================ */
+
+/* ================================
+       18.1 Creators
+       ================================ */
+
+       .creator-item {
+        background-color: var(--lighter-gray);
+        border: 1px solid var(--border-color);
+        border-radius: 25px;
+    }
+    
+    .creator-item .creator-wrapper {
+        background: var(--body-background);
+        padding: 0 30px 30px;
+        border-bottom: 1px solid var(--border-color);
+        border-radius: 0 0 25px 25px;
+        border-top-width: 0;
+    }
+    
+    .creator-item .creator-cover {
+        width: 100%;
+        max-height: 98px;
+        background-color: var(--lighter-gray);
+        border-radius: 25px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    
+    .creator-item .creator-cover img {
+        width: 100%;
+        border-radius: 25px;
+    }
+    
+    .creator-item .avatar.box-64 {
+        width: 80px;
+        height: 80px;
+        border: 8px solid var(--body-background);
+    }
+    
+    .creator-info-wrapper {
+        margin-top: -45px;
+        position: relative;
+    }
+    
+    .creator-info-wrapper .follow-me {
+        position: absolute;
+        top: 25px;
+        right: -40px;
+        z-index: 1;
+    }
+    
+    .creator-item .creator-info {
+        margin-bottom: 30px;
+    }
+    
+    .creator-item .creator-info .title {
+        font-size: 20px;
+        font-weight: var(--heading-font-weight);
+        line-height: 1.2;
+        letter-spacing: var(--letter-spacing);
+        margin-bottom: 5px;
+    }
+    
+    .creator-item .creator-info .title a:hover {
+        color: inherit;
+    }
+    
+    .creator-item .creator-info .item-meta {
+        font-size: 16px;
+        font-weight:var(--heading-font-weight);
+        letter-spacing: var(--letter-spacing);
+        line-height: 1;
+    }
+    
+    .creator-item .creator-info .avatar {
+        margin-bottom: 10px;
+    }
+    
+    .creator-item .btn-small {
+        padding: 10px 20px;
+    }
+    
+    .creator-item .social-icons-list {
+        margin-bottom: 20px;
+    }
+    
+    .creator-item .social-icons-list li {
+        margin-bottom: 10px;
+    }
+    
+    .creator-item .social-icons-list .social-icon {
+        width: 44px;
+        height: 34px;
+        margin-right: 8px;
+    }
+    
+    .creator-item  .about-creator {
+        margin-bottom: 55px;
+    }
+    
+    .creator-item  .about-creator p {
+        margin: 0;
+    }
+    
+    .creator-item .creator-stats {
+        padding: 22px 30px;
+    }
+    
+    .creator-item .creator-stats .stats-item .label {
+        font-size: 10px;
+        text-transform: uppercase;
+        line-height: 1.4;
+    }
+    
+    .creator-item .creator-stats .stats-item .number {
+        font-weight: var(--heading-font-weight);
+    }
+    
+    .preview-box {
+        width: 48px;
+        height: 48px;
+        margin-left: 0;
+        margin-right: 15px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    
+    .preview-box:last-child {
+        margin-right: 0;
+    }
+    
+    .preview-box img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+    
+    .preview-box.box-68 {
+        background-color: var(--lighter-gray);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        margin-left: 16px;
+        width: 68px;
+        height: 68px;
+    }
+    
+    .preview-box.box-68 img {
+        border-radius: 20px;
+    }
+    
+    .more-projects {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--body-background);
+        border: 1px solid var(--border-color);
+        border-radius: 15px;
+    }
+    
+    .more-projects a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .more-projects a:hover svg {
+        fill: var(--primary-accent-color);
+    }
+    
+    .more-projects svg {
+        width: 10px;
+        height: 2px;
+        fill: var(--main-font-color);
+    }
+    
+    @media (max-width: 1419px) {
+        .preview-box.box-68 {
+            margin-left: 0;
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .creator-stats .stats-item {
+            margin-right: 15px;
+        }
+    }
+    
+    @media (max-width: 414px) {
+        .preview-box {
+            width: 42px;
+            height: 42px;
+        }
+    }
+    

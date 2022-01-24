@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    
+    font-family: 'Manrope', sans-serif;
+}
+/* ==========================
+   1. GLOBAL VARIABLES
+   ========================== */
+
+   :root {
+    /* ============================
+       1.1. Primary template colors
+       ============================ */
+    --primary-accent-color: #ff6c0d;
+    --secondary-accent-color: #0084ff;
+    --primary-gradient-color: #ff394f;
+    --secondary-gradient-color: #ffcf26;
+    --cryptoki-gradient: linear-gradient(to right, var(--primary-gradient-color) 20%, var(--secondary-gradient-color));
+    /* ===============================
+       1.2. Body background and font colors
+       =============================== */
+    --body-background: #fff;
+    --component-background: #fff;
+    --border-color: #e1e1e1;
+    --main-font-color:#252831;
+    --unchangable-font-color: #252831; 
+    --contrast-text-color: #fff;
+    --inactive-text-color: #a8a9ad;
+    /* ====================================
+       1.3. Footer background nand font colors
+      ===================================== */
+    --footer-background: #14161b;
+    --footer-text-color:#fff;
+    /* ==============================
+       1.4. Additional colors
+       ============================== */
+    --light-gray: #e3e3e3;
+    --lighter-gray: #f3f3f3;
+    --extra-light-gray: #f9f9f9;
+    --pure-black: #000;
+    --fuchsia-color: #ff2654;
+    --unrated-color: #c8c7d5;
+    --cryptoki-blue:#1852ff;
+    --cryptoki-salmon: #ff3d54;
+    --ds-purple: #c23fff;
+    --ds-yellow: #feda03;
+    --cryptoki-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    --ds-red: #f32a63;
+    --ds-green: #00bf8b;
+    --btn-dark: #252831;
+    --ui-templates: var(--secondary-accent-color);
+    --social-graphics: var(--secondary-gradient-color);
+    --coded-templates: var(--primary-gradient-color);
+    --video-tutorials:var(--cryptoki-salmon);
+    /* ===========================
+       1.5. Typography sizes
+       ============================*/
+    --h1-heading: clamp(16px, calc(1rem + 3vw), 52px);
+    --h2-heading: clamp(16px,calc(1rem + 2vw), 42px);
+    --h3-heading: clamp(16px,calc(1rem + 1.5vw), 36px);
+    --h4-heading: clamp(16px,calc(1rem + 1.2vw), 28px);
+    --h5-heading: clamp(16px,calc(1rem + 0.75vw), 24px);
+    --h6-heading: clamp(14px,calc(1rem + 0.75vw), 20px);
+    --body-font-size: 14px;
+    --article-font-size: 16px;
+    --heading-font-weight: 800;
+    --body-font-weight: 500;
+    --letter-spacing: -0.04em;
+    
+    /* ===========================
+       1.6. Form authorization colors
+       ============================*/
+    --toggle-background-color-on: var(--cryptoki-gradient);
+    --toggle-background-color-off: var(--main-font-color);
+    --toggle-control-color: #fff;
+    --toggle-control-border: #343c4a;
+    /* ===========================
+       1.7. Border-radius
+       ============================*/
+    --btn-border-radius: 30px;
+    --input-border-radius: 30px;
+}
+
+/* ===========================
+       1.8. Dark Mode
+       ============================*/
+body.dark-mode {
+    --component-background: #121419;
+    --body-background: #121419;
+    --main-font-color:#fff;
+    --border-color: #353946;
+    --light-gray: #353946;
+    --lighter-gray: #20232b;
+    --extra-light-gray: #20232b;
+    --primary-accent-color: #00ffcc;
+    --primary-gradient-color: #177afa;
+    --secondary-gradient-color: #03f0d1;
+    --cryptoki-gradient: linear-gradient(to right, var(--primary-gradient-color) 20%, var(--secondary-gradient-color));
+    --toggle-background-color-on: var(--cryptoki-gradient);
+    --cryptoki-box-shadow: 0 3px 5px -1px rgba(255, 255, 255, 0.2), 0 6px 10px 0 rgba(255, 255, 255, 0.14), 0 1px 18px 0 rgba(255, 255, 255, .12);
+}
+
+body{
+    background-color: var(--body-background);
+    color: var(--main-font-color);
+    line-height: 2;
+    font-weight: var(--body-font-weight);
+    letter-spacing: var(--letter-spacing);
+    max-width: 100%;
+    width: 100%;
+    font-size: var(--body-font-size);
+}
+
+
+
+/* ===========================
+       2. DEFAULTS
+       ============================*/
+
+       *, *::after, *::before {
+        box-sizing: border-box;
+    }
+    
+    html {
+        color: var(--main-font-color);
+        font-size: 1em;
+        line-height: 1.4;
+        background-color: var(--body-background);
+        scroll-behavior: smooth;
+        content-visibility: auto;
+    }
+    
+    ::-moz-selection {
+        background: var(--secondary-gradient-color);
+        color: var(--contrast-text-color);
+        text-shadow: none;
+    }
+    
+    ::selection {
+        background: var(--secondary-gradient-color);
+        color: var(--contrast-text-color);
+        text-shadow: none;
+    }
+    
+    .cryptoki-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
+    .cryptoki-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: var(--main-font-color);
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .cryptoki-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .cryptoki-scrollbar::-webkit-scrollbar-thumb {
+        background-color: var(--light-gray) ;
+        border-radius: 6px;
+    }
+    
+    
+    body {
+        background-color: var(--body-background);
+    }
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+    
+    audio,
+    canvas,
+    iframe,
+    img,
+    svg,
+    video {
+        vertical-align: middle;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    figure {
+        margin: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color:inherit;
+    }
+    
+    a:hover,
+    a:active {
+        color: var(--primary-accent-color);
+        fill: var(--primary-accent-color);
+    }
+    
+    input:focus, select:focus {
+        outline: none;
+    }
+    
+    ul, ol {
+        margin: 0;
+        padding: 0;
+    }
+    
+h1, .h1 {
+    font-size: var(--h1-heading);
+    font-weight: var(--heading-font-weight);
+    letter-spacing: var(--letter-spacing);
+    margin: 0;
+    line-height: 1.15em;
+}
+
+h2, .h2 {
+    font-size: var(--h2-heading);
+    font-weight: var(--heading-font-weight);
+    line-height: 1.15em;
+    letter-spacing: var(--letter-spacing);
+    margin: 0 0 0.25em;
+}
+
+h3, .h3 {
+    font-size: var(--h3-heading);
+    font-weight: var(--heading-font-weight);
+    line-height: 1.5em;
+    letter-spacing: var(--letter-spacing);
+    margin: 0 0 0.25em;
+}
+
+h4, .h4 {
+    font-size: var(--h4-heading);
+    font-weight: var(--heading-font-weight);
+    line-height: 1.5;
+    letter-spacing: var(--letter-spacing);
+    margin: 0 0 0.25em;
+}
+
+h5, .h5 {
+    font-size: var(--h5-heading);
+    font-weight: var(--heading-font-weight);
+    line-height: 1.5;
+    letter-spacing: var(--letter-spacing);
+    margin: 0 0 0.25em;
+}
+
+h6, .h6 {
+    font-size: var(--h6-heading);
+    font-weight: var(--heading-font-weight);
+    line-height: 1.5;
+    letter-spacing: var(--letter-spacing);
+    margin: 0 0 0.5em;
+}
+
+    @keyframes fadeInUp {
+        from { opacity: 0; margin-top: 20px; }
+        to { opacity: 1; margin-top: 0; }
+    }
+    
+    /* ==============================
+           3. HELPER CLASSES
+           ============================== */
+    
+    /* =========================
+           3.1. General classes
+           ========================= */
+    
+    
+    .hidden,
+    [hidden] {
+        display: none !important;
+    }
+    
+    .sr-only {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+    
+    .sr-only.focusable:active,
+    .sr-only.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        white-space: inherit;
+        width: auto;
+    }
+    
+    .invisible {
+        visibility: hidden;
+    }
+    
+    .overflow-hidden {
+        overflow: hidden;
+    }
+    
+    .clearfix::before,
+    .clearfix::after {
+        content: " ";
+        display: table;
+    }
+    
+    .clearfix::after {
+        clear: both;
+    }
+    
+    .highlighted-item {
+        font-size: 10px;
+        line-height: 1;
+        color: var(--contrast-text-color);
+        border-radius: 30px;
+        padding: 4px 7px;
+        margin-left: 10px;
+    }
+    
+    
+button, input {
+    overflow: visible;
+}
+body, input {
+    font-weight: var(--body-font-weight);
+    letter-spacing: var(--letter-spacing);
+}
+img{
+    max-width: 100%;
+}
+svg {
+    width: 16px;
+    height: 16px;
+    color:var(--main-font-color);
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+.bold {
+    font-weight: var(--heading-font-weight);
+}
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.logo .logo-link, .collection-box, .header-user-profile {
+    display: flex;
+    align-items: center;
+}
+.logo .logo-img, .logo .logo-img svg {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.logo .logo-text {
+    font-size: 20px;
+    font-weight: var(--heading-font-weight);
+}
+ul {
+    list-style: none;
+}
+.content-padding {
+    padding-top: clamp(2rem,4.3vmax,70px);
+    padding-bottom: clamp(2rem,4.3vmax,70px);
+}
+.gradient-background {
+    background: var(--cryptoki-gradient);
+    color: var(--contrast-text-color);
+}
+.align-items-center {
+    align-items: center;
+}
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+/* ==================
+       8.2. Sections
+       =================== */
+
+       .section-title-wrapper,
+       .page-title-section {
+           display: flex;
+           justify-content: space-between;
+           align-items: baseline;
+           margin-bottom: max(2vw, 1rem);
+       }
+       
+       .section-medium {
+           width: 1000px;
+           padding-right: 30px;
+           padding-left: 30px;
+           max-width: 100%;
+           margin:0 auto;
+       }
+       
+       
+       .section-small {
+           width: 760px;
+           padding-right: 30px;
+           padding-left: 30px;
+           max-width: 100%;
+           margin:0 auto;
+       }
+       
+       .extra-small-section {
+           width: 525px;
+           padding-right: 30px;
+           padding-left: 30px;
+           max-width: 100%;
+           margin:0 auto;
+       }
+       
+       .section-title {
+           font-size: var(--h2-heading);
+           font-weight: var(--heading-font-weight);
+           line-height: 1.15em;
+           letter-spacing: var(--letter-spacing);
+           margin: 0 0 0.25em;
+       }
+       
+       .page-title {
+           margin-bottom: 40px;
+       }
+       
+       .small-title {
+           font-size: 16px;
+           font-weight: var(--heading-font-weight);
+           margin-bottom: clamp(1rem, 2vmax, 20px);
+           line-height: 1.4;
+           letter-spacing: var(--letter-spacing);
+       }
+       
+       .display-mode-links svg {
+           fill: var(--main-font-color);
+       }
+       .content-padding > .section-padding:first-child {
+        padding-top: 0;
+    }
+    .no-top-padding {
+        padding-top: 0 !important;
+    }
+       @media (max-width: 600px) {
+           .section-medium,
+           .section-small,
+           .extra-small-section {
+               padding-right: 15px;
+               padding-left: 15px;
+           }
+       }

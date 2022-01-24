@@ -1,0 +1,17 @@
+.section-title {
+    font-size: var(--h2-heading);
+    font-weight: var(--heading-font-weight);
+    line-height: 1.15em;
+    letter-spacing: var(--letter-spacing);
+    margin: 0 0 0.25em;
+}
+.gradient-text {
+    background-color: var(--main-font-color);
+    background-image: var(--cryptoki-gradient);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}

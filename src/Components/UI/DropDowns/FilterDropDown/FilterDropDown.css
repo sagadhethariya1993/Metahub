@@ -1,0 +1,135 @@
+.digital-store .topbar .nice-select {
+    background-color: transparent;
+}
+
+.digital-store .topbar .nice-select {
+    background-color: transparent;
+}
+
+.cryptoki-form.validation input.error,
+.cryptoki-form.validation .select-nice.error + .nice-select,
+.cryptoki-form.validation textarea.error {
+    border: 1px solid #ee2748;
+}
+
+.nice-select .list {
+    border-radius: var(--input-border-radius);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+    max-height: 210px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    background: var(--body-bakground);
+}
+.nice-select:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 6px;
+    margin-top: -2px;
+    background: url(https://image.shutterstock.com/image-vector/down-arrow-vector-icon-isolated-260nw-1187766172.jpg) no-repeat center;
+    pointer-events: none;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    background-size: cover;
+    -webkit-transform: rotate(
+0deg
+);
+    transform: rotate(
+0deg
+);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+    color: var(--primary-accent-color);
+}
+.nice-select .option {
+    cursor: pointer;
+    font-weight: var(--heading-font-weight);
+    line-height: 40px;
+    list-style: none;
+    outline: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.nice-select {
+    -webkit-tap-highlight-color: var(--pure-black);
+    background-color: var(--component-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-border-radius);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: var(--body-font-size);
+    font-weight: var(--heading-font-weight);
+    line-height: 1;
+    outline: none;
+    padding: max(0.8vw, 12px) max(1.5vw, 60px) max(0.8vw, 12px) max(1.5vw, 20px);
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+}
+.nice-select .nice-select-dropdown {
+    margin-top: 8px;
+    background-color: var(--component-background);
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 0 1px rgb(68 68 68 / 11%);
+    box-shadow: 0 0 0 1px rgb(68 68 68 / 11%);
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scale(0.75) translateY(-19px);
+    transform: scale(0.75) translateY(-19px);
+    -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    z-index: 9;
+    opacity: 0;
+}
+.filterable-bar  .filter-item {
+    margin-right: 15px;
+}
+
+.filter-item button {
+    padding: 18px 24px;
+}
+
+.nice-select.open:after {
+    -webkit-transform: rotate(
+-180deg
+);
+    transform: rotate(
+-180deg
+);
+}
+.filter-item svg {
+    width: 8px;
+    height: 5px;
+    margin-left: 60px;
+}
+@media(max-width:414px) {
+    .filterable-bar .filter-item,
+    .filterable-bar .filter-item .nice-select,
+    .filterable-bar .nice-select-dropdown {
+        width: 100%;
+    }
+}

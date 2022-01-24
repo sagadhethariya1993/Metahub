@@ -1,0 +1,37 @@
+
+/* ================================
+       8.4. Lists
+       ================================ */
+
+/* ================================
+       8.4.1. Styled list
+       ================================ */
+
+       ul {
+        list-style: none;
+    }
+    
+    ul li .bullet-icon {
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+    }
+    
+    ol li::marker {
+        font-weight: bold;
+    }
+    
+    .details-list {
+        list-style: none;
+    }
+    
+    .details-list li {
+        line-height: 2.75;
+    }
+    
+    .details-list li .detail-label {
+        display: inline-block;
+        width: 30%;
+        min-width: 105px;
+    }
+    

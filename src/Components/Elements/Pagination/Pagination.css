@@ -1,0 +1,28 @@
+/* ================================
+       11.6. Pagination
+       ================================ */
+
+       .pagination-section {
+        padding-top: clamp(2rem, 3.1vmax, 80px);
+        padding-bottom: clamp(1rem, 2.5vmax, 40px);
+    }
+    
+    .pagination-list {
+        display: flex;
+        list-style: none;
+        font-weight: var(--heading-font-weight);
+    }
+    
+    .pagination-list .page-nav-prev {
+        display: none;
+        margin-right: 22px;
+    }
+    
+    .pagination-list .page-item {
+        margin-right: 22px;
+    }
+    
+    .pagination-list .page-item:last-child {
+        margin-right: 0;
+    }
+    

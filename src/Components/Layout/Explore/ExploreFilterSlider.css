@@ -1,0 +1,43 @@
+
+
+.categories-bar .swiper-button-prev {
+    left: 0;
+}
+
+.categories-bar .swiper-button-next {
+    right: 0;
+}
+
+.categories-bar .swiper-button-prev ,.categories-bar .swiper-button-next {
+    display: flex;
+    align-items: center;
+    width: 20px;
+    background: var(--component-background);
+    z-index: 10;
+    fill: var(--main-font-color);
+}
+
+.categories-bar .arrow:hover svg {
+    fill: var(--primary-accent-color);
+}
+
+.categories-bar .swiper-button-next{
+    justify-content: flex-start;
+    box-shadow: var(--component-background) 5px 0px 10px 15px;
+}
+.categories-bar .swiper-button-prev {
+    justify-content: flex-end;
+    box-shadow: var(--component-background) -5px 0px 10px 15px;
+}
+
+.categories-bar svg {
+    width: 7px;
+    height: 12px;
+}
+
+.categories-bar {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    
+}

@@ -1,0 +1,20 @@
+.featured-box-wrapper {
+    margin-bottom: clamp(2rem, 3.75vmax, 60px);
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+.section-title-wrapper, .page-title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: max(2vw, 1rem);
+}
+.all-items-link {
+    font-size: 16px;
+    font-weight: var(--heading-font-weight);
+    line-height: 1.6;
+
+}
+

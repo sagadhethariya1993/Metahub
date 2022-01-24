@@ -1,0 +1,175 @@
+
+/* ================================
+       15.4. Subscribe widget
+       ================================ */
+
+       .subscribe-form-content {
+        display: flex;
+        width: max(250px, 20vw);
+        max-width: 100%;
+        border: solid 2px transparent;
+        border-radius: var(--input-border-radius);
+        background-image: linear-gradient(var(--footer-background), var(--footer-background)), linear-gradient(to right, var(--primary-gradient-color), var(--secondary-gradient-color));
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        position: relative;
+    }
+    
+    .subscribe-form .subscribe-input {
+        flex: 0 1 100%;
+        padding: 20px;
+        background:transparent;
+        border-radius: var(--input-border-radius);
+        border: none;
+        font-size: var(--body-font-size);
+        font-weight: var(--body-font-weight);
+    }
+    
+    .subscribe-widget .subscribe-submit {
+        position:absolute;
+        width: 24px;
+        height: 24px;
+        top: calc(50% - 12px);
+        right: 20px;
+    }
+    
+    .subscribe-widget .subscribe-submit svg {
+        fill: var(--footer-text-color);
+    }
+    
+    .subscribe-form .subscribe-form-message {
+        margin: 5px 0 0 5px;
+    }
+    
+    /* ================================
+          15.5. Subscribe widget v2
+          ================================ */
+    
+    .footer .subscribe-widget-v2 {
+        position: relative;
+        margin-top: -60px;
+    }
+    
+    .subscribe-widget-v2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 40px;
+        background: linear-gradient(50deg, var(--primary-gradient-color), var(--secondary-gradient-color));
+        border-radius: 25px;
+        padding: clamp(1.8rem,4vmax, 64px) 0 clamp(2rem,4.1vmax, 66px);
+        position: relative;
+    }
+    
+    .subscribe-widget-v2  .animated-img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        
+        background-size: cover;
+        border-radius: 25px;
+    }
+    
+    .animated-img {
+        position: absolute;
+        top: -28px;
+        left: 0;
+    }
+    
+    .subscribe-text {
+        color:#fff;
+        z-index: 1;
+    }
+    
+    .subscribe-text .h2 {
+        line-height: 1;
+    }
+    
+    .subscribe-text .subtitle {
+        font-weight: var(--heading-font-weight);
+    }
+    
+    .subscribe-form-v2 form {
+        position: relative;
+        width: 500px;
+        max-width: 100%;
+    }
+    
+    .subscribe-form-v2 input {
+        padding: 18px;
+        width: 100%;
+        border-radius: 10px;
+        border: 0;
+        color: var(--main-font-color);
+        font-size: var(--body-font-size);
+    }
+    
+    .subscribe-form-v2 input::placeholder {
+        font-size: var(--body-font-size);
+        color: var(--inactive-text-color);
+    }
+    
+    .subscribe-form-v2 .subscribe-submit {
+        height: 100%;
+        padding: 18px 34px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 0 10px 10px 0;
+    }
+    
+    .subscribe-form-v2 .subscribe-submit #send {
+        display: none;
+    }
+    
+    @media (max-width: 1024px) {
+    
+        .subscribe-widget-v2  {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .subscribe-widget-v2 .subscribe-text {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+    
+    }
+    
+    @media (max-width: 600px) {
+    
+        .footer .subscribe-widget-v2 {
+            margin-top: -30px;
+        }
+    
+        .subscribe-form-v2 form {
+            width: 300px;
+        }
+    
+        .subscribe-form-v2 .subscribe-submit {
+            padding: 18px;
+        }
+    
+        .subscribe-form-v2 .subscribe-submit #send {
+            display: block;
+            fill: var(--contrast-text-color);
+        }
+    
+        .subscribe-form-v2 .subscribe-submit .button-text {
+            display: none;
+        }
+    }
+    
+    
+    @media (max-width: 320px) {
+        .subscribe-form-v2 form {
+            width: 260px;
+        }
+    }
+    
+    
+    

@@ -1,0 +1,17 @@
+
+.collection-box .btn {
+    padding: 18px 27px;
+}
+.collection-box > * {
+    margin-right: 20px;
+}
+.collection-box > *:last-child {
+    margin-right: 10px;
+}
+.collection-box .collection-title {
+    font-weight: var(--heading-font-weight);
+    white-space: nowrap;
+}
+.count {
+    margin-left: 5px;
+}

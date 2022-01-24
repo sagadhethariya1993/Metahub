@@ -1,0 +1,40 @@
+.product-info-wrapper {
+    padding: clamp(2rem, 5vmax,80px) clamp(3rem, 6vmax,100px);
+}
+
+.product-info-wrapper > *,
+.product-info-wrapper .simplebar-content > *{
+    margin-bottom: clamp(2rem, 4vmax, 60px);
+}
+.product-version-2 .product-info {
+    background-color: var(--body-background);
+    width: 980px;
+    max-width: 100%;
+    margin: -80px auto 0;
+    border-radius: 20px;
+    position: relative;
+    z-index:10;
+}
+
+@media (max-width: 414px) {
+    .bidding-section > * {
+        margin-bottom: 20px;
+    }
+
+    .product-info-wrapper {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .product-version-2 .product-info {
+        margin: -60px auto 0;
+    }
+}
+
+@media(max-width: 767px) {
+    .product-version-2 .product-info {
+        margin: 0 auto 0;
+    }
+}

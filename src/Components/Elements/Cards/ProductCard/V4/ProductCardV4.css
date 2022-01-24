@@ -1,0 +1,71 @@
+/* ================================
+       17.4. Featured items v4
+       ================================ */
+
+       .featured-item.v4 .featured-item-content > * {
+        margin-bottom: 30px;
+    }
+    
+    .featured-item.v4 .featured-item-content > div:last-child {
+        margin-bottom: 0;
+    }
+    
+    .featured-item.v4 .featured-item-image {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    
+    .featured-item.v4 .item-meta {
+        font-size: 16px;
+        font-weight: var(--heading-font-weight);
+        line-height: 1;
+    }
+    
+    .featured-item.v4 .featured-item-pricebox .price {
+        font-size:18px;
+    }
+    
+    .featured-item.v4 .featured-item-author .title {
+        margin-bottom: 5px;
+    }
+    
+    .featured-item.v4 .featured-item-author,
+    .featured-item.v4 .featured-bidding-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    
+    .featured-item.v4 .avatar {
+        border: 6px solid var( --body-background);
+        position: absolute;
+        bottom: 155px;
+        left: 25px;
+        margin-bottom: 0;
+        width: 54px;
+        height: 54px;
+    }
+    
+    
+    .featured-item.v4 .featured-bidding-section {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .featured-item.v4 .featured-item-post-content {
+        justify-content: space-between;
+    }
+    
+    .featured-item.v4 .featured-item-post-content > * {
+        margin-right: 0;
+    }
+    
+    .featured-item.v4 .countdown-box .label {
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+    }
+    
+    .featured-item.v4 .countdown-box .countdown {
+        font-weight: var(--heading-font-weight);
+    }
+    

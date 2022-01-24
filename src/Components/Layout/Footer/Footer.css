@@ -1,0 +1,229 @@
+
+
+/* ================================
+       15. FOOTER
+       ================================ */
+
+       .footer {
+        margin-top:auto;
+        font-size: 13px;
+        background: var(--footer-background);
+        position: relative;
+        color: var(--footer-text-color);
+    }
+    
+    .footer a {
+        color: var(--footer-text-color);
+    }
+    
+    .footer p {
+        margin: 0;
+    }
+    
+    .footer input {
+        color: var(--footer-text-color);
+    }
+    
+    
+    .footer::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 8px;
+        z-index: 1;
+        background: var(--cryptoki-gradient);
+    }
+    
+    .footer-content {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    
+    .footer-column-large {
+        flex-basis: 500px;
+    }
+    
+    .footer-column {
+        margin-right: 20px;
+    }
+    
+    .footer-column:last-child {
+        margin-right: 0;
+    }
+    
+    .footer-row + .footer-row {
+        margin-top: 75px;
+    }
+    
+    .footer-margin {
+        margin-top: clamp(2rem, 6.25vmax, 100px);
+    }
+    
+    .footer .social-icons-list .social-icon svg {
+        fill: var(--footer-text-color);
+    }
+    
+    .footer .social-icons-list .social-icon:hover svg {
+        fill: var(--primary-accent-color);
+    }
+    
+    @media(max-width: 1024px) {
+        .footer-content {
+            flex-wrap: wrap;
+        }
+    
+        .footer-column-large {
+            flex-basis: min(300px, 30vw);
+        }
+    
+    }
+    
+    @media (max-width: 800px) {
+        .footer-column-large {
+            flex-basis: 100%;
+        }
+    }
+    
+    @media(max-width: 414px) {
+        .footer-content {
+            justify-content: flex-start;
+        }
+    
+        .footer-column {
+            flex-basis: 100%;
+            margin-right: 0;
+        }
+    
+        .footer-column .flex-space-between {
+            flex-wrap: wrap;
+        }
+    
+        .footer-column .is-two-col-element {
+            flex-wrap: nowrap;
+            flex-basis: 100%;
+        }
+    
+        .footer-column .is-two-col-element > * {
+            flex-basis: 50%;
+        }
+    
+        .footer-column .is-two-col-element .footer-menu {
+            margin-right: 0;
+        }
+        
+        .main:not(.digital-store) .footer-column:nth-child(3),
+        .main:not(.digital-store) .footer-column:last-child {
+            flex-basis: 50%;
+        }
+    }
+
+    
+/* ================================
+       15.1. Footer menu
+       ================================ */
+
+.footer-menu {
+    list-style: none;
+}
+
+.footer-menu .menu-item {
+    margin-bottom: 6px;
+}
+
+.footer-menu .menu-link {
+    display: block;
+    font-weight: 600;
+    line-height: 2.3;
+}
+
+/* ================================
+       15.2. Footer widgets
+       ================================ */
+
+.footer-widget>* {
+    margin-bottom: 30px;
+}
+
+.footer .widget-title {
+    font-size: var(--body-font-size);
+    font-weight: var(--heading-font-weight);
+    margin-bottom: clamp(1rem, 3vmax, 40px);
+}
+
+.is-two-col-element {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.is-two-col-element .footer-menu {
+    margin-right: 55px;
+}
+
+@media (max-width: 414px) {
+    .is-two-col-element {
+        flex-wrap: wrap;
+    }
+}
+
+/* ================================
+       15.3. Footer copyright
+       ================================ */
+
+.footer-copyright {
+    padding: 30px 0;
+    border-top:1px solid #31333b;
+    align-items: center;
+}
+
+.footer-copyright .copyright-text {
+    line-height: 1.2;
+}
+
+.sub-footer-menu {
+    list-style: none;
+    display: flex;
+}
+
+.sub-footer-menu .menu-item {
+    font-weight: var(--body-font-weight);
+}
+
+.sub-footer-menu .menu-item + .menu-item {
+    margin-left:30px;
+}
+
+@media(max-width: 414px) {
+    .sub-footer-menu .menu-item + .menu-item {
+        margin-left:10px;
+    }
+}
+
+/* ================================
+       11.7. Before footer
+       ================================ */
+
+       .before-footer-block {
+        display: flex;
+        padding-top: clamp(1rem, 4vmax, 100px);
+    }
+    
+    .before-footer-image {
+        flex: 0 1 240px;
+    }
+    
+    .before-footer-image img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+    
+    @media(max-width:767px) {
+        .before-footer-block {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+    }

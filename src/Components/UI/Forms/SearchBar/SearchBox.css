@@ -1,0 +1,57 @@
+.searchbox {
+    width: 100%;
+    flex: 0 3 700px;
+}
+.main-search {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-border-radius);
+}
+
+.main-search .search-params {
+    border-radius: var(--input-border-radius) 0 0 var(--input-border-radius);
+    border-right: 1px solid var(--border-color);
+    background-color: var(--extra-light-gray);
+    color: var(--main-font-color);
+}
+.main-search .search-params svg {
+    width: 8px;
+    margin-left: 5px;
+    fill: var(--main-font-color);
+    transition: all ease .1s;
+}
+.main-search .search-dropdown {
+    position: absolute;
+    background-color: var(--extra-light-gray);
+    border: 1px solid var(--border-color);
+    top: calc(100% + 10px);
+    left: -1px;
+    width: 200px;
+    z-index: 60;
+    padding: 10px 0;
+    border-radius: var(--input-border-radius);
+    text-align: left;
+    animation: fadeInUp .25s;
+}
+.main-search .search-dropdown li {
+    white-space: initial;
+    padding: 10px 20px;
+    font-size: var(--body-font-size);
+    line-height: 1.4;
+    font-weight: var(--heading-font-weight);
+}
+
+.main-search .search-input, .main-search .search-params, .main-search .search-button {
+    border: none;
+    padding: 18px 20px;
+    white-space: nowrap;
+}
+.main-search .search-input {
+    flex: 0 1 100%;
+    background-color: var(--component-background);
+    color: var(--main-font-color);
+    border-radius: 0;
+    outline: 0px !important;
+}

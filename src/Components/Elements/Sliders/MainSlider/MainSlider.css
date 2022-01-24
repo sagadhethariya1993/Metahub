@@ -1,0 +1,59 @@
+.MainSlider{
+    width: 70%;
+    overflow: visible !important;
+}
+.MainSlider img{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.MainSlider .swiper-slide{
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.MainSlider .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: -15px !important;
+    background: white;
+    padding: 10px;
+    border-radius: 30px;
+    height: auto !important;
+    width: 30px !important;
+    border: 1px solid var(--border-color);
+}
+.MainSlider .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: -15px !important;
+    background: white;
+    padding: 10px;
+    border-radius: 30px;
+    height: auto !important;
+    width: 30px !important;
+    border: 1px solid var(--border-color);
+}
+.MainSlider .swiper-button-prev:after,.MainSlider .swiper-rtl .swiper-button-next:after,.MainSlider .swiper-button-next:after,.MainSlider .swiper-rtl .swiper-button-prev:after {
+    font-size: 7px !important;
+    color: var(--main-font-color);
+}
+
+.MainSlider .item-meta{
+    margin-bottom: 20px;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+    .MainSlider{
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .MainSlider .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        display :none;
+    }
+    .MainSlider .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        display :none;
+        
+    }
+}

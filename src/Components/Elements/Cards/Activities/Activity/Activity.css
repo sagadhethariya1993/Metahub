@@ -1,0 +1,163 @@
+/* ================================
+       23. ACTIVITY
+       ================================ */
+
+       .activity-list + .load-more_bars {
+        margin-top: 75px;
+    }
+    
+    .activity-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15px 15px 30px;
+        border: 1px solid var(--border-color);
+        border-radius: 25px;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    
+    .activity-item.bid::before {
+        content:"";
+        
+        background-size: 12px;
+        background-color: #6a52ff;
+        width: 30px;
+        height: 24px;
+        border-radius: 30px;
+        position: absolute;
+        left: -6px;
+        top: 10px;
+    
+    }
+    
+    .activity-item.like::before {
+        content:"";
+       
+        background-size: 13px;
+        background-color: #ff3a4e;
+        width: 30px;
+        height: 24px;
+        border-radius: 30px;
+        position: absolute;
+        left: -6px;
+        top: 10px;
+    
+    }
+    
+    .activity-item.follow {
+        padding: 30px;
+    }
+    
+    .activity-item.follow::before {
+        content:"";
+        
+        background-size: 12px;
+        background-color: #2371ff;
+        width: 30px;
+        height: 24px;
+        border-radius: 30px;
+        position: absolute;
+        left: -6px;
+        top: 10px;
+    }
+    
+    .activity-item.sale::before {
+        content:"";
+        
+        background-size: 12px;
+        background-color: #ff813b;
+        width: 30px;
+        height: 24px;
+        border-radius: 30px;
+        position: absolute;
+        left: -6px;
+        top: 10px;
+    }
+    
+    .activity-item.purchase::before {
+        content:"";
+        
+        background-size: 12px;
+        background-color: #ffc000;
+        width: 30px;
+        height: 24px;
+        border-radius: 30px;
+        position: absolute;
+        left: -6px;
+        top: 10px;
+    }
+    
+    .activity-item.listing::before {
+        content:"";
+        
+        background-size: 10px;
+        background-color: #00e7a3;
+        width: 30px;
+        height: 24px;
+        border-radius: 30px;
+        position: absolute;
+        left: -6px;
+        top: 10px;
+    }
+    
+    .bid-placer {
+        display: flex;
+        align-items: center;
+    }
+    
+    .bid-placer .avatar + .bid-info {
+        margin-left: 10px;
+    }
+    
+    .bid-info .bid-title {
+        line-height: 1.4;
+        margin-bottom: 5px;
+        font-weight: var(--heading-font-weight);
+    }
+    
+    .bid-info .bid-date {
+        font-size: 13px;
+        line-height: 1;
+    }
+    
+    .bid-product {
+        width: 72px;
+        height: 72px;
+        border: 1px solid var(--border-color);
+        border-radius: 18px;
+        background: var(--extra-light-gray);
+    }
+    
+    .bid-product img {
+        min-width: 72px;
+        border-radius: 18px;
+    }
+    
+    .load-more {
+        width: 65px;
+        margin: 0 auto;
+    }
+    
+    @media(max-width: 414px) {
+    
+        .activity-item {
+            border-radius: 20px;
+        }
+    
+        .activity-item.follow {
+            padding: 15px 15px 15px 30px;
+        }
+    
+        .bid-product {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+        }
+    
+        .bid-product img {
+            min-width: 50px;
+            border-radius: 12px;
+        }
+    }
+    

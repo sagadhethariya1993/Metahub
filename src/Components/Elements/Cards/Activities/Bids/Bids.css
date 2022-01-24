@@ -1,0 +1,31 @@
+
+/* ================================
+       19.1.2. Placed bids
+       ================================ */
+
+       .placed-bid {
+        display: flex;
+        justify-content: space-between;
+        padding: 26px 30px;
+        border: 1px solid var(--border-color);
+        border-radius: 25px;
+        margin-bottom: 20px;
+    }
+    
+    .bid-box {
+        text-align: right;
+    }
+    
+    .placed-bid .creator-meta .creator-name,
+    .bid-box .crypto-value {
+        font-weight:var(--heading-font-weight);
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+    
+    .placed-bid .creator-meta .bid-date,
+    .bid-box .currency-value {
+        font-size: 13px;
+        line-height: 1;
+    }
+    

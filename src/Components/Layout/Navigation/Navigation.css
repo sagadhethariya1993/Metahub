@@ -1,0 +1,73 @@
+.site-header {
+    background-color: var(--component-background);
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--border-color);
+}
+.padding-top-bottom {
+    padding: 20px 0;
+}
+.topbar-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.smart-sticky {
+    position: sticky;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: var(--component-background);
+}
+.topbar-wrapper > * {
+    margin-right: 10px;
+}
+
+.user-activity-buttons {
+    display: flex;
+}
+.user-activity-buttons > * {
+    margin-right: 20px;
+    position: relative;
+}
+.cryptoki-notif-bttn {
+    position: relative;
+}
+.smart-sticky[data-visible="sticky"], .smart-sticky[data-visible="false"] {
+    transition: top 0.2s linear;
+}
+
+header .headercontainer {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1480px;
+    margin: 0 auto;
+}
+.topbar-wrapper > div:last-child {
+    margin-right: 0;
+}
+@media (min-width: 1200px)
+{
+    .topbar-wrapper > * {
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 1024px)
+{
+    .site-header .logo {
+    flex-grow: 1;
+    }
+}
+@media (max-width: 600px)
+{
+    .headercontainer {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    }
+}
+@media (max-width: 568px)
+{#notifications-dropdown, #cart-dropdown {
+    top: 90px;
+}}

@@ -1,0 +1,89 @@
+#notifications-dropdown {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 25px 30px;
+    background-color: var(--component-background);
+    border: 1px solid var(--border-color);
+    color: var(--main-font-color);
+    border-radius: 25px;
+    z-index: 100;
+    max-width: 100vw;
+    width: 360px;
+}
+
+#notifications-dropdown .title {
+    font-size: var(--body-font-size);
+    letter-spacing: var(--letter-spacing);
+    font-weight: var(--heading-font-weight);
+    text-align: left;
+    margin-bottom: 30px;
+}
+.notifications-wrapper {
+    margin-bottom: 40px;
+    max-height: 250px;
+    padding-right: 10px;
+}
+.cryptoki-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-font-color);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.notification .thumb-box {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    position: relative;
+    margin-right: 10px;
+}
+.notification .thumb-box img {
+    object-fit: cover;
+    border-radius: 15px;
+}
+.notification .thumb-box span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px;
+    font-size: 0;
+}
+.bid-type {
+    background-color: #6a52ff;
+}
+.review-type {
+    background-color: #c23fff;
+}
+.like-type {
+    background-color: #ff3a4e;
+}
+.notifications-wrapper .notification {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    letter-spacing: var(--letter-spacing);
+    margin-bottom: 30px;
+}
+.notification .notification-info {
+    text-align: left;
+}
+.notification .notification-info {
+    text-align: left;
+}
+.purchase-type {
+    background-color: #ffc000;
+}
+.cryptoki-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-font-color);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#notifications-dropdown .btn-small-fullwidth{
+    padding:12px 0px;
+}

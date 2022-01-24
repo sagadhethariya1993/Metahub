@@ -1,0 +1,179 @@
+
+/* ================================
+       21. COLLECTORS
+       ================================ */
+
+
+       .collectors-filter select:last-child {
+        margin-left: 15px;
+    }
+    
+    .collectors-filter select {
+        flex-basis: 293px;
+    }
+    
+    table.content-table {
+        width: 100%;
+        text-align: left;
+        border-collapse: separate;
+        border-spacing: 0 20px;
+    }
+    
+    .content-table thead .heading-label {
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+    
+    .content-table thead .heading-label:first-child {
+        padding-left: 30px;
+    }
+    
+    .content-table th {
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .content-table tbody > tr {
+        padding: 30px;
+    }
+    
+    .content-table .collector-info {
+        flex-basis: 380px;
+    }
+    
+    .content-table td {
+        border: solid 1px var(--border-color);
+        border-style: solid none;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        background-color: var(--component-background);
+    }
+    
+    .content-table td:first-child {
+        border-left-style: solid;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        padding-left: 30px;
+    }
+    .content-table td:last-child {
+        border-right-style: solid;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        padding-right: 30px;
+    }
+    
+    .collectors-box  .stats-item {
+        font-weight: var(--heading-font-weight);
+    }
+    
+    
+    @media(max-width: 414px) {
+        .collectors-filter form {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    
+        .collectors-filter div.nice-select ~ div.nice-select {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    
+        .collectors-filter .nice-select,
+        .collectors-filter .nice-select-dropdown {
+            width: 100%;
+        }
+    }
+    
+    
+    
+    
+    /* ================================
+           21.1. Collectors mobile view
+           ================================ */
+    
+    @media (max-width: 800px) {
+        table.content-table {
+            border: 0;
+            border-spacing: 0;
+        }
+    
+        table.content-table caption {
+            font-size: 1.3em;
+        }
+    
+        table.content-table thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+    
+        table.content-table tr {
+            display: block;
+            margin-bottom: .625em;
+            border-bottom: 2px solid var(--border-color);
+        }
+    
+        table.content-table td {
+            display: block;
+            font-size: .8em;
+            text-align: right;
+        }
+    
+        table.content-table td::before {
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    
+        table.content-table tr:last-child {
+            border-bottom: 0;
+        }
+    
+        .content-table tbody > tr {
+            padding: 10px;
+        }
+    
+        .content-table td {
+            border: none;
+            padding: 5px 0;
+        }
+    
+        .content-table td:first-child {
+            border: none;
+            padding-left: 0;
+        }
+        .content-table td:last-child {
+            border: none;
+            padding-right: 0;
+        }
+    
+        .collectors-filter + .collectors-box table.content-table {
+            border-spacing: 0 20px;
+        }
+    
+        .collector-info {
+            flex-basis: 0;
+            justify-content: flex-end;
+        }
+    
+        .collector-info .collector-meta {
+            text-align: left;
+        }
+    
+        .collector-info .small-title {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+    
+        .collector-info .avatar,
+        .collector-meta .meta {
+            display: none;
+        }
+    }
+    

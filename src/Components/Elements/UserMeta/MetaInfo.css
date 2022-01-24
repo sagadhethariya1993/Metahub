@@ -1,0 +1,32 @@
+.item-meta .avatar {
+    position: relative;
+    margin-right: 10px;
+}
+.header-user-profile .user-meta {
+    border-left: 1px solid var(--border-color);
+    padding-left: 20px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.item-meta{
+    
+    display: inline-flex;
+    background-color: var(--component-background);
+    padding: 3px 6px;
+    border-radius: 30px;
+}
+.item-meta img{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+@media (max-width: 414px) {
+    .header-user-profile .user-meta {
+        display: none;
+    }
+}

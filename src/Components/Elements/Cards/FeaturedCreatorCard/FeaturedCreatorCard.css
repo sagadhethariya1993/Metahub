@@ -1,0 +1,181 @@
+.featured-creators-item {
+    display: flex;
+    flex-wrap: nowrap;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    z-index: 1;
+    background-color: var(--component-background);
+
+}
+.featured-creators-item > img {
+    width: 177px;
+    border-radius: 30px 20px 20px 30px;
+    object-fit: cover;
+    object-position: center bottom;
+}
+.featured-creators-wrapper {
+    padding: clamp(1rem, 3vmax, 45px);
+}
+.featured-creators-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.featured-creators-item .title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: var(--heading-font-weight);
+    margin-bottom: 7px;
+}
+.follow-me {
+    align-self: flex-start;
+}
+.featured-creators-wrapper > * {
+    margin-bottom: 30px;
+}
+.social-icons-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.social-icons-list .social-icon {
+    
+    margin-right: 15px;
+}
+.creator-stats {
+    display: flex;
+}
+.creator-stats .stats-item {
+    margin-right: 40px;
+}
+.featured-creators-item .title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: var(--heading-font-weight);
+    margin-bottom: 7px;
+}
+.social-icons-list .social-icon:last-child {
+    margin-right: 0;
+}
+.icon-border a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 34px;
+    background-color: var(--component-background);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    line-height: 1;
+}
+.featured-creators-info a:hover{
+    color: black;
+}
+.creator-stats .stats-item:last-child {
+    margin-right: 0;
+}
+.featured-creators-wrapper > div:last-child {
+    margin-bottom: 0;
+}
+.projects-previews {
+    display: flex;
+}
+.preview-box {
+    width: 48px;
+    height: 48px;
+    margin-left: 0;
+    margin-right: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.preview-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.more-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--component-background);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+}
+.call-to-action-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    background: linear-gradient(
+50deg, var(--primary-gradient-color), var(--secondary-gradient-color));
+    border-radius: 25px;
+    padding: 66px 0 68px;
+    position: relative;
+    overflow: hidden;
+}
+.call-to-action-box .animated-img {
+    position: absolute;
+    top: -38px;
+    bottom: 0;
+    left: -10px;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    border-radius: 25px;
+}
+.call-to-action-text {
+    color: #fff;
+}
+.call-to-action-text .subtitle {
+    font-weight: var(--heading-font-weight);
+}
+.h2 {
+    font-size: var(--h2-heading);
+    font-weight: var(--heading-font-weight);
+    line-height: 1.15em;
+    letter-spacing: var(--letter-spacing);
+    margin: 0 0 0.25em;
+}
+@media screen and (max-width: 1199px){
+    .featured-creators-item {
+        flex-wrap: wrap;
+    }
+    .featured-creators-item > img {
+        width: 100%;
+        height: 120px;
+        border-radius: 25px;
+        object-position: center center;
+    }
+    .featured-creators-wrapper {
+        padding: clamp(1rem, 3vmax, 45px);
+    }
+    .projects-previews {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 414px){
+    .featured-creators-item .creator-stats .stats-item {
+        margin-right: 0;
+    }
+    .preview-box {
+        width: 42px;
+        height: 42px;
+    }
+    .featured-creators-item .creator-stats {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px){
+    .creator-stats .stats-item {
+        margin-right: 15px;
+    }
+    .call-to-action-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .call-to-action-box .call-to-action-text {
+        margin-bottom: 10px;
+    }
+}

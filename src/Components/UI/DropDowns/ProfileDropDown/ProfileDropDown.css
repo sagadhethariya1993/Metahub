@@ -1,0 +1,166 @@
+#profile-dropdown {
+    width: 240px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    position: absolute;
+    right: -20px;
+    top: 60px;
+    background-color: var(--extra-light-gray);
+    will-change: opacity, visibility;
+    z-index: 100;
+    display: none;
+}
+.active #profile-dropdown{
+    display: block;
+}
+.profile-cover-image {
+    background:  no-repeat 0 0;
+    background-size: cover;
+    border-radius: 25px 25px 0 0;
+}
+.profile-dropdown-header {
+    height: 40px;
+}
+.profile-heading {
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: -45px;
+}
+.profile-heading .profile-avatar {
+    border: 3px solid var(--component-background);
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+.header-user-profile .avatar {
+    margin-left: 10px;
+    position: relative;
+    transform: scale(1);
+    will-change: transform;
+    transition: transform 0.3s linear;
+}
+.box-26 {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+}
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cryptoki-gradient);
+}
+.box-26 img {
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--component-background);
+}
+.profile-heading .profile-avatar .verified {
+    position: absolute;
+    right: -2px;
+    top: 8px;
+}
+
+.profile-heading .profile-link a {
+    font-size: 10px;
+}
+.profile-dropdown-body {
+    padding: 30px 0;
+    background-color: var(--component-background);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0 0 20px 20px;
+}
+.profile-heading .profile-link a {
+    font-size: 10px;
+}
+.profile-menu li {
+    display: flex;
+    align-items: center;
+}
+.profile-menu li a {
+    padding: 8px 30px;
+    font-size: 13px;
+    font-weight: var(--heading-font-weight);
+    transition: all 0.2s ease-in;
+}
+.profile-menu li:hover {
+    background-color: var(--extra-light-gray);
+}
+
+.profile-menu li:hover a {
+    color: inherit;
+    transform: translateX(8px);
+}
+.profile-menu li:hover svg {
+    fill: url(#cryptoki-svg-gradient) var(--primary-accent-color);
+}
+.profile-menu li svg {
+    fill: var(--main-font-color);
+}
+.profile-dropdown-footer {
+    padding: 25px 30px;
+}
+.mode-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mode-toggle .mode-title {
+    font-size: 13px;
+    font-weight: var(--heading-font-weight);
+}
+.mode-toggle .mode-title svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    fill: var(--main-font-color);
+}
+.toggle-control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    user-select: none;
+}
+.toggle-control input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.toggle-control .control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 30px;
+    border-radius: 30px;
+    background-color: var(--toggle-background-color-off);
+    transition: background-color 0.15s ease-in;
+}
+.toggle-control .control::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 30px;
+    background-color: var(--toggle-control-color);
+    transition: left 0.15s ease-in;
+}
+.toggle-control .control.dark::after {
+    left: 16px;
+}
+
+.toggle-control .control.dark{
+    background: var(--toggle-background-color-on);
+
+}

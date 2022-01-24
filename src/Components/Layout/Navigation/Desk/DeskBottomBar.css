@@ -1,0 +1,285 @@
+
+/* ================================
+        10. PRIMARY NAVIGATION
+        ================================ */
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: var(--body-background);
+        }
+        
+        .smart-sticky {
+            position: sticky;
+            left: 0;
+            right: 0;
+            z-index: 20;
+            background: var(--body-background);
+        }
+        
+        .smart-sticky[data-visible="sticky"],
+        .smart-sticky[data-visible="false"] {
+            transition: top 0.2s linear;
+        } 
+        
+        .navigation-menu {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: baseline;
+            list-style:none;
+            position: relative;
+        }
+        
+        .navigation-menu > .menu-item {
+            margin-right:30px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .navigation-menu .menu-item:last-child {
+            margin-right:0;
+        }
+        
+        .navigation-menu .hidden-menu img {
+            width: 10px;
+            height: 2px;
+            fill: var(--main-font-color);
+        }
+        
+        .navigation-menu .hidden-menu .menu-link:hover img {
+            filter: invert(66%) sepia(45%) saturate(7157%) hue-rotate(352deg) brightness(100%) contrast(105%);
+        }
+        
+        .menu-item .menu-link {
+            display: block;
+            font-size: var(--body-font-size);
+            font-weight: var(--heading-font-weight);
+            line-height: 1;
+        }
+        
+        .navigation-menu .menu-item .menu-link {
+            padding: 25px 0;
+        }
+        
+        .navigation-menu .menu-item .menu-link:hover,
+        .navigation-menu .menu-item .menu-link:active {
+            background-color: var(--main-font-color);
+            background-image: var(--cryptoki-gradient);
+            background-size: 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .navigation-menu .menu-item .menu-link:visited {
+            background-color: var(--main-font-color);
+            background-image: var(--cryptoki-gradient);
+            background-size: 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: var(--main-font-color);
+        }
+        
+        .menu-item-has-children {
+            position: relative;
+        }
+        
+        .menu-item-has-children .menu-link .indicator {
+            display: inline-flex;
+        }
+        
+        .menu-item-has-children .menu-link .indicator img {
+            width: 8px;
+            height: 8px;
+            margin-left: 5px;
+        }
+        
+        .navigation-menu .menu-item-has-children:hover > .menu-link,
+        .navigation-menu .menu-item-has-children:active > .menu-link,
+        .navigation-menu .menu-item-has-children:visited > .menu-link {
+            background-color: var(--main-font-color);
+            background-image: var(--cryptoki-gradient);
+            background-size: 100%;
+            /*noinspection CssInvalidPropertyValue*/
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .menu-item-has-children:hover > .menu-link > .indicator img {
+            fill: var(--primary-accent-color);
+        }
+        
+        .navigation-menu > li.menu-item-has-children > .menu-link > .indicator img {
+            transition: transform 0.2s linear;
+        }
+        
+        .navigation-menu > li.menu-item-has-children:hover > .menu-link > .indicator img {
+            transform: rotate(180deg);
+            filter: invert(66%) sepia(45%) saturate(7157%) hue-rotate(352deg) brightness(100%) contrast(105%);
+
+        }
+        /* ================================
+        10.1. Submenu
+        ================================ */
+
+.navigation-menu .menu-item-has-children ul.submenu,
+.navigation-menu ul.submenu li ul.submenu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 80%;
+    margin: 0;
+    padding: 20px 0;
+    min-width: 270px;
+    list-style: none;
+    background-color: var(--body-background);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    z-index: 100;
+    will-change: opacity, visibility;
+    transition: visibility 0s linear , opacity 0.3s linear;
+}
+
+.navigation-menu ul.submenu li ul.submenu {
+    left: 92%;
+    top: -16px;
+}
+
+.navigation-menu .menu-item-has-children:hover > ul.submenu,
+.navigation-menu ul.submenu > .menu-item-has-children:hover > ul.submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navigation-menu .submenu .menu-item .menu-link {
+    font-size: var(--body-font-size);
+    line-height: 1.4;
+    font-weight: var(--heading-font-weight);
+    padding: 10px 30px;
+}
+
+.navigation-menu ul.submenu > .menu-item-has-children > .menu-link > .indicator img {
+    transition: transform 0.2s linear;
+}
+
+.navigation-menu ul.submenu > .menu-item-has-children:hover > .menu-link > .indicator img {
+    transform: translateX(5px);
+}
+
+.submenu > .menu-item-has-children .menu-link .indicator {
+    opacity: 0;
+    transition: opacity .3s linear;
+}
+
+.submenu > .menu-item-has-children:hover > .menu-link > .indicator {
+    opacity: 1;
+}
+
+/* ================================
+        10.2. Megamenu
+        ================================ */
+
+.navigation-menu .megamenu {
+    visibility: hidden;
+    opacity: 0;
+    width: 770px;
+    max-width: 80vw;
+    position: absolute;
+    top: 80%;
+    left: auto;
+    right: 50%;
+    transform: translate(50%,0);
+    z-index: 100;
+    will-change: opacity, visibility;
+    transition: visibility 0s linear, opacity .3s linear;
+}
+
+.navigation-menu .menu-item-has-megamenu:hover .megamenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navigation-menu .megamenu .megamenu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--body-background);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    padding: 30px 50px;
+}
+
+.navigation-menu .megamenu .megamenu-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    margin-right: clamp(2rem, 5.6vmax, 90px);
+}
+
+.navigation-menu .megamenu .megamenu-column:last-child {
+    margin-right: 0;
+}
+
+.navigation-menu .megamenu-column .megamenu-title {
+    font-size: var(--body-font-size);
+    font-weight: var(--heading-font-weight);
+    margin-bottom: 20px;
+}
+
+.navigation-menu .megamenu .menu-item .menu-link {
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+/* ================================
+        10.3. Hidden menu dropdown
+        ================================ */
+
+.hidden-menu-dropdown {
+    visibility: hidden;
+    opacity: 0;
+    width: 270px;
+    padding: 20px 0;
+    background-color: var(--body-background);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    position: absolute;
+    z-index: 10;
+    right: -200px;
+    top: 50px;
+    will-change: opacity, visibility;
+    transition: visibility 0s linear .3s, opacity linear .3s;
+}
+
+.navigation-menu .hidden-menu:hover .hidden-menu-dropdown {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.loading .hidden-menu-dropdown{
+    display: none;
+}
+
+.hidden-menu-dropdown a {
+    font-size: var(--body-font-size);
+    font-weight: var(--heading-font-weight);
+    display: block;
+    padding: 6px 30px;
+
+}
+.gradient-background {
+    background: var(--cryptoki-gradient);
+    color: var(--contrast-text-color);
+}
+.highlighted-item {
+    font-size: 10px;
+    line-height: 1;
+    color: var(--contrast-text-color);
+    border-radius: 30px;
+    padding: 4px 7px;
+    margin-left: 10px;
+}

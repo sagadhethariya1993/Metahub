@@ -1,0 +1,17 @@
+.logo .logo-link, .collection-box, .header-user-profile {
+    display: flex;
+    align-items: center;
+}
+.logo .logo-img, .logo .logo-img svg {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.logo .logo-text {
+    font-size: 20px;
+    font-weight: var(--heading-font-weight);
+}
+.logo .logo-link, .collection-box, .header-user-profile {
+    display: flex;
+    align-items: center;
+}

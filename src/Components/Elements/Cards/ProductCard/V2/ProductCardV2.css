@@ -1,0 +1,78 @@
+/* ================================
+       17.2. Featured items v2
+       ================================ */
+
+       .featured-item.v2 .featured-item-info .title {
+        text-align: center;
+    }
+    
+    .featured-item.v2 .avatar {
+        margin-right: 12px;
+    }
+    
+    .featured-item.v2 .item-meta {
+        justify-content: center;
+    }
+    
+    .featured-item.v2 .featured-item-content {
+        padding: 0;
+    }
+    
+    .featured-item.v2 .featured-item-post-content {
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .featured-item.v2 .featured-item-post-content > * {
+        margin-right: 0;
+    }
+    
+    .featured-item.v2 .featured-item-info {
+        text-align: center;
+        padding: 30px 10px;
+    }
+    
+    .featured-item.v2 .title {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: var(--heading-font-weight);
+        margin-bottom: 15px;
+        letter-spacing: var(--letter-spacing);
+    }
+    
+    .featured-item.v2 .featured-countdown {
+        font-size: 12px;
+    }
+    
+    .featured-item-pricebox {
+        text-align: left;
+    }
+    
+    .featured-item.v2 .price-caption,
+    .featured-item.v2 .social-caption {
+        line-height: 1;
+    }
+    
+    .featured-item.v2 .fav-counter {
+        position: relative;
+        right: 0;
+        top: 0;
+        border: none;
+        background: none;
+        padding: 0;
+    }
+    
+    .featured-item.v2 .fav-counter svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .featured-item.v2 .fav-counter:hover > * {
+        fill: var(--primary-accent-color);
+        color: inherit;
+    }
+    
+    .featured-item.v2 .fav-counter .count {
+        font-size: 10px;
+    }

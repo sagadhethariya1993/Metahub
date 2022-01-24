@@ -1,0 +1,179 @@
+/* =========================
+       3.7. Grid layout classes
+       ========================= */
+
+       .grid-aside-main-4-col {
+        display: grid;
+        grid-template-areas: "aside main-content-area";
+        grid-template-columns: 1fr 3fr;
+    }
+    
+    .grid-left-sidebar {
+        display: grid;
+        grid-template-columns: 340px 3fr;
+        grid-column-gap: clamp(1rem, 8vw, 140px);
+    }
+    
+    .grid-right-sidebar {
+        display: grid;
+        grid-template-columns: 3fr 340px;
+        grid-column-gap: clamp(1rem, 8vw, 140px);
+    }
+    
+    .grid-right-sidebar-large {
+        display: grid;
+        grid-template-columns: 3fr minmax(320px,1.5fr);
+        grid-column-gap: 20px;
+    }
+    
+    .grid-2-columns {
+        display: grid;
+        grid-template-columns: minmax(340px, 1fr) minmax(340px, 1fr);
+        grid-gap: 20px;
+    }
+    
+    .grid-3-columns {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 20px;
+    }
+    
+    .grid-aside-main-4-col .grid-3-columns {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    
+    .grid-4-columns {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-gap: 20px;
+    }
+    
+    .grid-6-columns {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(218px, 1fr));
+        grid-gap: 20px;
+    }
+    
+    .grid-small-sidebar-left {
+        display: grid;
+        grid-template-columns: 260px minmax(550px, 3fr);
+        grid-gap: clamp(1rem, 6.25vw, 100px);
+    }
+    
+    @media(max-width: 1199px) {
+        .grid-aside-main-4-col {
+            grid-template-columns: 1fr 2fr;
+        }
+    
+    }
+    
+    @media(max-width: 1024px) {
+        .grid-aside-main-4-col .grid-4-columns {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+    }
+    
+    @media (max-width: 800px) {
+        .grid-2-columns {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+        }
+        .grid-aside-main-4-col {
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        .grid-right-sidebar-large {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+        }
+    
+        .grid-left-sidebar,
+        .grid-right-sidebar {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: clamp(1rem, 8vw, 140px);
+            grid-column-gap: 0;
+        }
+    
+    }
+    
+    @media (max-width: 600px) {
+        .grid-aside-main-4-col {
+            grid-template-columns: 1fr;
+            grid-template-areas: none;
+        }
+    
+    }
+    
+    @media (max-width: 414px) {
+        .grid-3-columns {
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            grid-column-gap: 0;
+        }
+    }
+    
+    @media(max-width: 320px) {
+        .grid-aside-main-4-col .grid-3-columns {
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        }
+    
+        .grid-2-columns,
+        .grid-left-sidebar,
+        .grid-right-sidebar {
+            grid-template-columns: 290px;
+        }
+    }
+    
+
+/* ================================
+       14. ASIDE
+       ================================ */
+
+.aside-wrapper {
+    padding-top: 15px;
+}
+
+.widget {
+    margin-bottom: 50px;
+}
+
+.widget:last-child {
+    margin-bottom: 0;
+}
+
+.widget-title {
+    margin-bottom:20px;
+}
+
+.widget-contact .email {
+    font-size: 16px;
+    font-weight: var(--heading-font-weight);
+}
+
+.widget-2 {
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.widget-2 .widget-title.h5 {
+    font-size: 16px;
+    font-weight: var(--heading-font-weight);
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    aside {
+        margin-bottom: 30px;
+    }
+
+}
+
+
+@media(max-width: 414px) {
+    .widget-2,
+    .news-item-classic .news-content {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,27 @@
+.ProductSlider .swiper-button-next,.ProductSlider .swiper-button-prev {
+    top: -15px !important;
+    z-index: 50;
+   
+}
+.ProductSlider{
+    overflow: visible !important;
+    padding-right: 15px;
+
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+}
+.ProductSlider .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: auto !important;
+    right: 45px !important;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .ProductSlider{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}

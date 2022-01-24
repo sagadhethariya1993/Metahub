@@ -1,0 +1,39 @@
+/* ================================
+       19.1.1. Countdown JS
+       ================================ */
+
+       .product-meta-item .js-countdown .countdown__timer {
+        display: flex;
+    }
+    
+    .product-meta-item .js-countdown .countdown__item {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .product-meta-item .countdown__item + .countdown__item {
+        margin-left: 15px;
+    }
+    
+    .product-meta-item .js-countdown .countdown__value {
+        font-size: clamp(1rem, 2vmax, 32px);
+        font-weight: var(--heading-font-weight);
+        line-height: 1.2;
+        letter-spacing: var(--letter-spacing);
+    }
+    
+    .product-meta-item .js-countdown .countdown__label {
+        font-size: clamp(0.5rem, 1vmax, 14px);
+        font-weight: var(--heading-font-weight);
+    }
+    
+    @media(max-width: 1199px) {
+        .product-version-1 {
+            grid-template-columns: 1fr;
+        }
+    
+        .product-version-1 .product-img {
+            text-align: center;
+        }
+    }
+    

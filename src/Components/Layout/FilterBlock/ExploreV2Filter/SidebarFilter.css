@@ -1,0 +1,156 @@
+/* ================================
+       12.7. Filter forms
+       ================================ */
+
+
+       #filter-form {
+        padding: 30px;
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        margin-right: 20px;
+    }
+    
+    #filter-form input[type="submit"],
+    #filter-form input[type="reset"] {
+        width: 100%;
+        font-weight:var(--heading-font-weight);
+    }
+    
+    #filter-form input[type="submit"] {
+        background: var(--main-font-color);
+        color: var(--contrast-text-color);
+        margin-top: 0;
+    }
+    
+    #filter-form input[type="submit"]:active,
+    #filter-form input[type="submit"]:visited,
+    #filter-form input[type="submit"]:focus {
+        border: none;
+    }
+    
+    body.dark-mode #filter-form input[type="submit"] {
+        background:var(--cryptoki-gradient);
+        color: var(--contrast-text-color);
+    }
+    
+    #filter-form .form-group {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    
+    #filter-form input[type="number"] {
+        margin-bottom: 0;
+    }
+    
+    @media(max-width: 1024px) {
+        #filter-form .is-two-col-element {
+            flex-wrap: wrap;
+        }
+    
+        #filter-form .form-group {
+            margin-bottom: 20px;
+        }
+    }
+    /* ================================
+       12.2. Cryptoki checkbox
+       ================================ */
+
+.cryptoki-form input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.cryptoki-form input[type="checkbox"] + label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+}
+
+.cryptoki-form input[type="checkbox"] + label::before {
+    content:'';
+    width: 1em;
+    height: 1em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: var(--lighter-gray);
+    border: 1px solid var(--border-color);
+    border-radius: 0.4em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.cryptoki-form input[type="checkbox"]:checked + label::before {
+    background: var(--cryptoki-gradient);
+    border: none;
+}
+
+.cryptoki-form input[type="checkbox"]:checked + label::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    background-image: url(https://www.svgrepo.com/show/178323/cross-close.svg);
+    filter: invert(1);
+}
+
+
+/* ================================
+       12.3. Cryptoki radio
+       ================================ */
+
+.cryptoki-form input[type="radio"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.cryptoki-form input[type="radio"] + label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+}
+
+.cryptoki-form input[type="radio"] + label::before {
+    content:'';
+    width: 14px;
+    height: 14px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: var(--lighter-gray);
+    border: 1px solid var(--border-color);
+    border-radius: 1em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.cryptoki-form input[type="radio"]:checked + label::before {
+    background: var(--cryptoki-gradient);
+    border:none;
+}
+
+.cryptoki-form input[type="radio"]:checked + label::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 3px;
+    top: 12px;
+    border-radius: 10px;
+    background: white;
+}
+.form-list-elem {
+    font-weight: var(--heading-font-weight);
+    line-height: 1;
+    margin-bottom: 20px;
+}

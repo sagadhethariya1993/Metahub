@@ -1,0 +1,10 @@
+
+.section-title-wrapper,
+.page-title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: max(2vw, 1rem);
+}
+
+

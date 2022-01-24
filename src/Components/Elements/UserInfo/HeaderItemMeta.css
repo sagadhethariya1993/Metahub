@@ -1,0 +1,39 @@
+.header-user-profile {
+    position: relative;
+    cursor: pointer;
+}
+.header-user-profile .user-meta {
+    border-left: 1px solid var(--border-color);
+    padding-left: 20px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.header-user-profile .user_name {
+    font-weight: var(--heading-font-weight);
+}
+
+.header-user-profile .user_score {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+}
+.header-user-profile .user_score svg {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+}
+.header-user-profile .avatar {
+    margin-left: 10px;
+    position: relative;
+    transform: scale(1);
+    will-change: transform;
+    transition: transform 0.3s linear;
+}
+
+@media (max-width: 414px)
+{
+    .header-user-profile .user-meta {
+    display: none;
+    }
+}
