@@ -1,0 +1,34 @@
+
+/* ================================
+       22.2. Collections
+       ================================ */
+
+       .collection-item {
+        position: relative;
+        border-radius: 28px;
+        border: 1px solid var(--border-color);
+    }
+    
+    
+    .collection-item .cover-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+    }
+    
+    .collection-item .collection-info {
+        width: 70%;
+        color: var(--contrast-text-color);
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+    
+    .collection-item .collection-info .title {
+        line-height: 1.1;
+    }
+    
+    .collection-item .collection-info .number {
+        font-size: 16px;
+    }
+    

@@ -1,5 +1,6 @@
 import './ProfileDropDown.css'
 import {Avatar26} from '../../../Elements/Avatars'
+import { NavLink } from 'react-router-dom';
 export const ProfileDropDown=({changeMode,Mode})=>{
 
 
@@ -10,30 +11,30 @@ export const ProfileDropDown=({changeMode,Mode})=>{
                 <div className="profile-heading">
                   <Avatar26/>
                   <div className="profile-link">
-                    <a className="btn btn-small gradient-background" href="08-profile-page.html">My Profile</a>
+                    <NavLink className="btn btn-small gradient-background" to="/profile">My Profile</NavLink>
                   </div>
                 </div>
                 <ul className="profile-menu">
                   <li className="profile">
-                    <a href="23-profile-info.html">Profile Info</a>
+                    <NavLink to="23-profile-info.html">Profile Info</NavLink>
                   </li>
                   <li className="account">
-                    <a href="29-account-settings.html">Account Settings</a>
+                    <NavLink to="29-account-settings.html">Account Settings</NavLink>
                   </li>
                   <li className="notification">
-                    <a href="30-notification-settings.html">Notification Settings</a>
+                    <NavLink to="30-notification-settings.html">Notification Settings</NavLink>
                   </li>
                   <li className="artwork">
-                    <a href="26-upload-artwork.html">Create Artwork</a>
+                    <NavLink to="26-upload-artwork.html">Create Artwork</NavLink>
                   </li>
                   <li className="wallet">
-                    <a href="18-connect-a-wallet.html">Wallet info</a>
+                    <NavLink to="18-connect-a-wallet.html">Wallet info</NavLink>
                   </li>
                   <li className="verification">
-                    <a href="31-get-verified.html">Get Verified</a>
+                    <NavLink to="31-get-verified.html">Get Verified</NavLink>
                   </li>
                   <li className="logout">
-                    <a href="!#">Log Out</a>
+                    <NavLink to="!#">Log Out</NavLink>
                   </li>
                 </ul>
               </div>

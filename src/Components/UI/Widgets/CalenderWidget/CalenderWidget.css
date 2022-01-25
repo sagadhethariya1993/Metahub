@@ -1,0 +1,87 @@
+/* ================================
+       14.5. Calendar Widget
+       ================================ */
+
+       .calendar-table {
+        border-spacing: 10px;
+        width: 100%;
+    }
+    
+    .calendar-table caption {
+        font-size: 16px;
+        font-weight: var(--heading-font-weight);
+    }
+    
+    .calendar-table th {
+        font-size: 10px;
+        font-weight: var(--heading-font-weight);
+        text-transform: uppercase;
+    }
+    
+    .calendar-table td {
+        font-size: var(--body-font-size);
+        font-weight: var(--heading-font-weight);
+        line-height: 1;
+        background: var(--body-background);
+        border: 1px solid var(--border-color);
+        border-radius: var(--btn-border-radius);
+        text-align: center;
+    }
+    
+    .calendar-table td a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 13px;
+    }
+    
+    .calendar-table td:hover {
+        border: solid 1px transparent;
+        background-image: linear-gradient(var(--body-background), var(--body-background)), linear-gradient(to right, var(--primary-gradient-color), var(--secondary-gradient-color));
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        position: relative;
+    }
+    
+    .calendar-table td.inactive a {
+        color: var(--inactive-text-color);
+        border-color: var(--inactive-text-color);
+    }
+    
+    .calendar-table td.inactive:hover {
+        color: inherit;
+        border-color: var(--inactive-text-color);
+        background-image: none;
+    }
+    
+    @media(max-width:1200px) {
+        .calendar-table {
+            border-spacing: 5px;
+        }
+        .calendar-table td {
+            font-size: 12px;
+        }
+    
+        .calendar-table td a {
+            padding: 8px 7px;
+        }
+    }
+    
+    @media(max-width:800px) {
+        .calendar-table td a {
+            padding: 10px 9px;
+        }
+    
+    }
+    
+    @media(max-width:320px) {
+        .calendar-table td {
+            font-size: 12px;
+        }
+        .calendar-table td a {
+            padding: 8px 7px;
+        }
+    }

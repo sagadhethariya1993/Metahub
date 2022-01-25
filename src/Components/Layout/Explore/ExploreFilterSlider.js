@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { CategoryItem } from '../../Elements/CategoryItem/CategoryItem';
 import './ExploreFilterSlider.css'
-import {OverflowHidden, Ux} from '../../Elements/HOC';
+import { Ux} from '../../Elements/HOC';
 
 export const ExploreFilterSlider=()=>{
     const [controlledSwiper, setControlledSwiper] = useState(null);

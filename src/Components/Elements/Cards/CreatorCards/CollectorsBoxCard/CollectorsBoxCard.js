@@ -1,4 +1,4 @@
-
+import { NavLink } from 'react-router-dom';
 import './CollectorsBoxCard.css'
 import {Avatar42} from '../../../Avatars'
 
@@ -13,7 +13,7 @@ export const CollectorsBoxCard=()=>{
                 <div className="collector-info avatar-block">
                   <Avatar42/>
                   <div className="avatar-meta">
-                    <div className="avatar-title"><a href="08-profile-page.html">Jackie Jones</a></div>
+                    <div className="avatar-title"><NavLink to="/profile">Jackie Jones</NavLink></div>
                     <div className="avatar-meta">@JackieJ</div>
                   </div>
                 </div>

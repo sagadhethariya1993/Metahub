@@ -1,0 +1,33 @@
+
+/* ================================
+       14.2. Widget Search
+       ================================ */
+
+       .widget-search .search {
+        position: relative;
+        border: 1px solid var(--border-color);
+        border-radius: var(--input-border-radius);
+        display: flex;
+    }
+    
+    .widget-search .search-input,
+    .widget-search .search-button {
+        border: none;
+        padding: 18px 20px;
+        white-space: nowrap;
+    }
+    
+    .widget-search .search-input {
+        flex: 0 1 100%;
+        background-color: var(--body-background);
+        color: var(--main-font-color);
+        border-radius: var(--input-border-radius);
+    }
+    
+    @media(max-width: 320px) {
+        .widget-search .search-input,
+        .widget-search .search-button {
+            padding: 15px 17px;
+        }
+    }
+    

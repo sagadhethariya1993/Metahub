@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { ProfileDropDown } from '../../UI/DropDowns/ProfileDropDown/ProfileDropDown';
 import './HeaderItemMeta.css'
 
-import { Check } from 'react-bootstrap-icons';
 import { Avatar42 } from '../Avatars';
 import { UserMeta } from '../UserMeta/UserMeta';
 

@@ -2,7 +2,7 @@
 import './DeskBottomBar.css'
 import {Facebook,Twitter,Instagram} from 'react-bootstrap-icons'
 import down from '../../../../assets/svg/arrow-down.svg';
-
+import { NavLink } from 'react-router-dom';
 
 export const DeskBottomBar=()=>{
 
@@ -11,58 +11,58 @@ export const DeskBottomBar=()=>{
         <nav className="border-bottom" data-visible="false">
             <div className="navigation-wrapper headercontainer flex-space-between align-items-center">
                 <ul className="navigation-menu">
-                <li className="menu-item"><a className="menu-link" href="01-index.html">Home</a></li>
-                <li className="menu-item menu-item-has-children"><a className="menu-link" href="#">Explore
-                    <span className="indicator"><img src={down}/></span>
-                    </a>
+                <li className="menu-item"><NavLink className="menu-link" to="/">Home</NavLink></li>
+                <li className="menu-item menu-item-has-children"><NavLink className="menu-link" to="/">Explore
+                    <span className="indicator"><img src={down} alt=""/></span>
+                    </NavLink>
                     <ul className="submenu">
-                    <li className="menu-item"><a className="menu-link" href="02-explore.html">Explore</a>
+                    <li className="menu-item"><NavLink className="menu-link" to="/explore">Explore</NavLink>
                     </li>
-                    <li className="menu-item"><a className="menu-link" href="03-explore-v2.html">Explore v2</a>
+                    <li className="menu-item"><NavLink className="menu-link" to="/explorev2">Explore v2</NavLink>
                     </li>
-                    <li className="menu-item"><a className="menu-link" href="04-item-versions.html">Item versions</a>
+                    <li className="menu-item"><NavLink className="menu-link" to="/itemversions">Item versions</NavLink>
                     </li>
                     </ul>
                 </li>
-                <li className="menu-item"><a className="menu-link" href="10-creators.html">Creators</a></li>
-                <li className="menu-item"><a className="menu-link" href="11-collectors.html">Collectors</a></li>
-                <li className="menu-item"><a className="menu-link" href="16-spotlight.html">Spotlight</a></li>
-                <li className="menu-item menu-item-has-children"><a className="menu-link" href="#">Product<span className="indicator"><img src={down}/></span></a>
+                <li className="menu-item"><NavLink className="menu-link" to="/exploreCreators">Creators</NavLink></li>
+                <li className="menu-item"><NavLink className="menu-link" to="/explorecollectors">Collectors</NavLink></li>
+                <li className="menu-item"><NavLink className="menu-link" to="/spotlight">Spotlight</NavLink></li>
+                <li className="menu-item menu-item-has-children"><NavLink className="menu-link" to="/">Product<span className="indicator"><img src={down} alt=""/></span></NavLink>
                     <ul className="submenu">
-                    <li className="menu-item"><a className="menu-link" href="05-product-page.html">Product v1</a>
+                    <li className="menu-item"><NavLink className="menu-link" to="/productv1">Product v1</NavLink>
                     </li>
-                    <li className="menu-item"><a className="menu-link" href="06-product-page-v2.html">Product v2</a>
+                    <li className="menu-item"><NavLink className="menu-link" to="/productv2">Product v2</NavLink>
                     </li>
-                    <li className="menu-item"><a className="menu-link" href="07-product-page-v3.html">Product v3</a>
+                    <li className="menu-item"><NavLink className="menu-link" to="/productv3">Product v3</NavLink>
                     </li>
                     </ul>
                 </li>
-                <li className="menu-item menu-item-has-megamenu menu-item-has-children"><a className="menu-link" href="#">All
-                    pages<span className="indicator"><img src={down}/></span></a><span className="highlighted-item gradient-background">NEW</span>
+                <li className="menu-item menu-item-has-megamenu menu-item-has-children"><NavLink className="menu-link" to="/">All
+                    pages<span className="indicator"><img src={down} alt=""/></span></NavLink><span className="highlighted-item gradient-background">NEW</span>
                     <div className="megamenu">
                     <div className="megamenu-wrapper">
                         <div className="megamenu-column">
                         <div className="megamenu-title">Main Pages</div>
                         <div className="flex-space-between">
                             <ul className="submenu-column">
-                            <li className="menu-item"><a href="01-index.html" className="menu-link">Home</a></li>
-                            <li className="menu-item"><a href="02-explore.html" className="menu-link">Explore</a></li>
-                            <li className="menu-item"><a href="03-explore-v2.html" className="menu-link">Explore v2</a></li>
-                            <li className="menu-item"><a href="04-item-versions.html" className="menu-link">Item versions</a></li>
-                            <li className="menu-item"><a href="16-spotlight.html" className="menu-link">Spotlight</a></li>
-                            <li className="menu-item"><a href="05-product-page.html" className="menu-link">Product page</a></li>
-                            <li className="menu-item"><a href="06-product-page-v2.html" className="menu-link">Product page v2</a></li>
+                            <li className="menu-item"><NavLink to="/" className="menu-link">Home</NavLink></li>
+                            <li className="menu-item"><NavLink to="/explore" className="menu-link">Explore</NavLink></li>
+                            <li className="menu-item"><NavLink to="/explorev2" className="menu-link">Explore v2</NavLink></li>
+                            <li className="menu-item"><NavLink to="/itemversions" className="menu-link">Item versions</NavLink></li>
+                            <li className="menu-item"><NavLink to="/spotlight" className="menu-link">Spotlight</NavLink></li>
+                            <li className="menu-item"><NavLink to="/productv1" className="menu-link">Product page</NavLink></li>
+                            <li className="menu-item"><NavLink to="/productv2" className="menu-link">Product page v2</NavLink></li>
                             </ul>
                             <ul className="submenu-column">
-                            <li className="menu-item"><a href="07-product-page-v3.html" className="menu-link">Product page v3</a></li>
-                            <li className="menu-item"><a href="12-blog-grid.html" className="menu-link">Blog grid</a></li>
-                            <li className="menu-item"><a href="13-blog-classic.html" className="menu-link">Blog classic</a></li>
-                            <li className="menu-item"><a href="14-blog-post-centered.html" className="menu-link">Blog postcentered</a>
+                            <li className="menu-item"><NavLink to="/productv3" className="menu-link">Product page v3</NavLink></li>
+                            <li className="menu-item"><NavLink to="/blog" className="menu-link">Blog grid</NavLink></li>
+                            <li className="menu-item"><NavLink to="/classicblog" className="menu-link">Blog classic</NavLink></li>
+                            <li className="menu-item"><NavLink to="/blogpostcentered" className="menu-link">Blog postcentered</NavLink>
                             </li>
-                            <li className="menu-item"><a href="15-blog-post-sidebar.html" className="menu-link">Blog post sidebar</a>
+                            <li className="menu-item"><NavLink to="/blogpostslidebar" className="menu-link">Blog post sidebar</NavLink>
                             </li>
-                            <li className="menu-item"><a href="19-faq.html" className="menu-link">FAQ</a></li>
-                            <li className="menu-item"><a href="20-contact.html" className="menu-link">Contact</a></li>
+                            <li className="menu-item"><NavLink to="/faq" className="menu-link">FAQ</NavLink></li>
+                            <li className="menu-item"><NavLink to="/coantact" className="menu-link">Contact</NavLink></li>
                             </ul>
                         </div>
                         </div>
@@ -70,57 +70,57 @@ export const DeskBottomBar=()=>{
                         <div className="megamenu-title">User pages</div>
                         <div className="flex-space-between">
                             <ul className="submenu-column">
-                            <li className="menu-item"><a href="08-profile-page.html" className="menu-link">Profile page</a></li>
-                            <li className="menu-item"><a href="09-profile-page-about.html" className="menu-link">Profile page
-                                about</a></li>
-                            <li className="menu-item"><a href="23-profile-info.html" className="menu-link">Profile info</a></li>
-                            <li className="menu-item"><a href="26-upload-artwork.html" className="menu-link">Upload artwork</a></li>
-                            <li className="menu-item"><a href="25-notifications.html" className="menu-link">Notifications</a></li>
-                            <li className="menu-item"><a href="27-shopping-cart.html" className="menu-link">Shopping cart</a></li>
-                            <li className="menu-item"><a href="28-checkout.html" className="menu-link">Checkout</a></li>
+                            <li className="menu-item"><NavLink to="/profile" className="menu-link">Profile page</NavLink></li>
+                            <li className="menu-item"><NavLink to="09-profile-page-about.html" className="menu-link">Profile page
+                                about</NavLink></li>
+                            <li className="menu-item"><NavLink to="23-profile-info.html" className="menu-link">Profile info</NavLink></li>
+                            <li className="menu-item"><NavLink to="26-upload-artwork.html" className="menu-link">Upload artwork</NavLink></li>
+                            <li className="menu-item"><NavLink to="25-notifications.html" className="menu-link">Notifications</NavLink></li>
+                            <li className="menu-item"><NavLink to="27-shopping-cart.html" className="menu-link">Shopping cart</NavLink></li>
+                            <li className="menu-item"><NavLink to="28-checkout.html" className="menu-link">Checkout</NavLink></li>
                             </ul>
                             <ul className="submenu-column">
-                            <li className="menu-item"><a href="17-activity.html" className="menu-link">Activity</a></li>
-                            <li className="menu-item"><a href="10-creators.html" className="menu-link">Creators</a></li>
-                            <li className="menu-item"><a href="11-collectors.html" className="menu-link">Collectors</a></li>
-                            <li className="menu-item"><a href="24-become-a-creator.html" className="menu-link">Become a creator</a>
+                            <li className="menu-item"><NavLink to="17-activity.html" className="menu-link">Activity</NavLink></li>
+                            <li className="menu-item"><NavLink to="/exploreCreators" className="menu-link">Creators</NavLink></li>
+                            <li className="menu-item"><NavLink to="/explorecollectors" className="menu-link">Collectors</NavLink></li>
+                            <li className="menu-item"><NavLink to="24-become-a-creator.html" className="menu-link">Become a creator</NavLink>
                             </li>
-                            <li className="menu-item"><a href="18-connect-a-wallet.html" className="menu-link">Connect a wallet</a>
+                            <li className="menu-item"><NavLink to="18-connect-a-wallet.html" className="menu-link">Connect a wallet</NavLink>
                             </li>
-                            <li className="menu-item"><a href="21-login.html" className="menu-link">Login</a></li>
-                            <li className="menu-item"><a href="22-register.html" className="menu-link">Register</a></li>
+                            <li className="menu-item"><NavLink to="21-login.html" className="menu-link">Login</NavLink></li>
+                            <li className="menu-item"><NavLink to="22-register.html" className="menu-link">Register</NavLink></li>
                             </ul>
                         </div>
                         </div>
                     </div>
                     </div>
                 </li>
-                <li className="menu-item menu-item-has-children"><a className="menu-link" href="#">Blog<span className="indicator"><img src={down}/></span></a>
+                <li className="menu-item menu-item-has-children"><NavLink className="menu-link" to="/">Blog<span className="indicator"><img src={down} alt=""/></span></NavLink>
                     <ul className="submenu">
-                    <li className="menu-item"><a className="menu-link" href="12-blog-grid.html">Blog grid</a>
+                    <li className="menu-item"><NavLink className="menu-link" to="/blog">Blog grid</NavLink>
                     </li>
-                    <li className="menu-item"><a className="menu-link" href="13-blog-classic.html">Blog classic</a>
+                    <li className="menu-item"><NavLink className="menu-link" to="/classicblog">Blog classic</NavLink>
                     </li>
-                    <li className="menu-item"><a className="menu-link" href="14-blog-post-centered.html">Blog post centered</a>
+                    <li className="menu-item"><NavLink className="menu-link" to="/blogpostcentered">Blog post centered</NavLink>
                     </li>
-                    <li className="menu-item"><a className="menu-link" href="15-blog-post-sidebar.html">Blog post sidebar</a>
+                    <li className="menu-item"><NavLink className="menu-link" to="/blogpostslidebar">Blog post sidebar</NavLink>
                     </li>
                     </ul>
                 </li>
-                <li className="menu-item hidden-menu"><a className="menu-link" href="#"></a>
+                <li className="menu-item hidden-menu"><NavLink className="menu-link" to="/"></NavLink>
                     <ul className="hidden-menu-dropdown submenu">
-                    <li className="menu-item"><a href="19-faq.html" className="menu-link">Frequently Asked Questions</a></li>
-                    <li className="menu-item"><a href="24-become-a-creator.html" className="menu-link">Become a Creator</a></li>
-                    <li className="menu-item"><a href="20-contact.html" className="menu-link">Contact Us</a></li>
-                    <li className="menu-item"><a href="21-login.html" className="menu-link">Login</a></li>
-                    <li className="menu-item"><a href="22-register.html" className="menu-link">Register</a></li>
+                    <li className="menu-item"><NavLink to="/faq" className="menu-link">Frequently Asked Questions</NavLink></li>
+                    <li className="menu-item"><NavLink to="24-become-a-creator.html" className="menu-link">Become a Creator</NavLink></li>
+                    <li className="menu-item"><NavLink to="/coantact" className="menu-link">Contact Us</NavLink></li>
+                    <li className="menu-item"><NavLink to="21-login.html" className="menu-link">Login</NavLink></li>
+                    <li className="menu-item"><NavLink to="22-register.html" className="menu-link">Register</NavLink></li>
                     </ul>
                 </li>
                 </ul>
                 <ul className="social-icons-list">
-                <li className="social-icon"><a href="#"><Facebook/></a></li>
-                <li className="social-icon"><a href="#"><Instagram/></a></li>
-                <li className="social-icon"><a href="#"><Twitter/></a></li>
+                <li className="social-icon"><NavLink to="/"><Facebook/></NavLink></li>
+                <li className="social-icon"><NavLink to="/"><Instagram/></NavLink></li>
+                <li className="social-icon"><NavLink to="/"><Twitter/></NavLink></li>
                 </ul>
             </div>
         </nav>

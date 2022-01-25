@@ -4,7 +4,7 @@ import {PreFooter} from '../../Components/Layout';
 import { ProductMedia,ProductInfoV3, ProductMeta } from '../../Components/Elements/ProductElements';
 import './ProductPage.css'
 import { Bids ,ProductCard } from '../../Components/Elements/Cards';
-
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -19,18 +19,18 @@ export const ProductV3=()=>{
                     <div className="page-title-section">
                         <div className="social-share-box">
                             <div className="share-icons">
-                            <a href="#">
+                            <NavLink to="/">
                                 <Link/>
-                            </a>
-                            <a href="#">
+                            </NavLink>
+                            <NavLink to="/">
                                 <Facebook/>
-                            </a>
-                            <a href="#">
+                            </NavLink>
+                            <NavLink to="/">
                                 <Twitter/>
-                            </a>
-                            <a href="">
+                            </NavLink>
+                            <NavLink to="/">
                                 <Instagram/>
-                            </a>
+                            </NavLink>
                             </div>
                         </div>
                         <div className="product-title">
@@ -39,9 +39,9 @@ export const ProductV3=()=>{
                         <div className="favourite-section">
                             <div className="product-fav-counter"><Heart/><span className="count">105</span>
                             </div>
-                            <div className="more-link"><a href="#">
+                            <div className="more-link"><NavLink to="/">
                                 <ThreeDots/>
-                            </a>
+                            </NavLink>
                             </div>
                         </div>
                     </div>

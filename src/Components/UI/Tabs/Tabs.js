@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { DescriptionList } from '..';
 import { Bids, ProductActivity } from '../../Elements/Cards';
 import './Tabs.css'
-
+import { NavLink } from 'react-router-dom';
 
 
 export const Tabs=()=>{
@@ -35,8 +35,8 @@ export const Tabs=()=>{
 
     useEffect(()=>{
         let tabData = list.map((i,index)=>(
-            activeTab.Title===i.Title?<li onClick={()=>setActiveTab(i)} className='active'  key={`tab ${i.Title + index}`}><a >{i.Title}</a></li>
-           :<li onClick={()=>setActiveTab(i)}  key={`tab ${i.Title + index}`}><a >{i.Title}</a></li>
+            activeTab.Title===i.Title?<li onClick={()=>setActiveTab(i)} className='active'  key={`tab ${i.Title + index}`}><NavLink to="/">{i.Title}</NavLink></li>
+           :<li onClick={()=>setActiveTab(i)}  key={`tab ${i.Title + index}`}><NavLink to="/">{i.Title}</NavLink></li>
         ));
             setTabList(tabData);
     },[activeTab])

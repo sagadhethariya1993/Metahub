@@ -1,0 +1,301 @@
+
+/* ================================
+       20.1. Profile header
+       ================================ */
+
+       .profile-header-section .cover-image {
+        max-height: 320px;
+    }
+    
+    .profile-header-user-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -80px;
+        position: relative;
+    }
+    
+    .profile-header-user-profile .follow-box {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        height: 56px;
+    }
+    
+    .more-link {
+        width: max(3.75vw, 45px);
+        height: max(3.12vw, 36px);
+        max-height: 50px;
+        border: 1px solid var(--border-color);
+        border-radius: 30px;
+        margin-right: 15px;
+        background: var(--body-background);
+        cursor: pointer;
+    }
+    
+    .more-link a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .more-link svg {
+        width: 10px;
+        height: 2px;
+        fill:var(--main-font-color);
+    }
+    
+    .more-link:hover svg {
+        fill:var(--primary-accent-color);
+    }
+    
+    .author-primary-info {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .author-primary-info .activity-meta,
+    .author-primary-info .projects-meta {
+        display: flex;
+        justify-content: space-between;
+        flex: 0 1 33.3%;
+    }
+    
+    .author-primary-info .activity-meta > *
+    .author-primary-info .projects-meta > * {
+        text-align: center;
+    }
+    
+    .activity-meta .number,
+    .projects-meta .number {
+        font-size: clamp(16px, calc(1rem + 1vw), 32px);
+        font-weight: var(--heading-font-weight);
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+    
+    .activity-meta .label,
+    .projects-meta .label {
+        line-height: 1;
+    }
+    
+    .projects-meta .country .flag {
+        margin: 0 0 15px;
+    }
+    
+    .projects-meta .country .flag img {
+        margin: 0 auto;
+    }
+    
+    .profile-author-info {
+        text-align: center;
+    }
+    
+    .profile-author-info a:hover {
+        color: inherit;
+    }
+    
+    .profile-author-info h3 {
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
+    
+    .profile-author-info .author-meta {
+        font-size: 16px;
+    }
+    
+    .profile-author-info .author-meta + .download-file {
+        margin-top: 24px;
+    }
+    
+    .profile-author-info .download-file {
+        display: inline-block;
+        padding: 8px 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 30px;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: var(--heading-font-weight);
+        white-space: nowrap;
+        cursor: pointer;
+    }
+    
+    .profile-author-info .download-file svg {
+        fill: var(--main-font-color);
+        margin-left: 5px;
+    }
+    
+    .author-description {
+        width: 700px;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .author-description p {
+        margin-bottom: 30px;
+    }
+    
+    .author-description .social-icons-list {
+        justify-content: center;
+    }
+    /* ================================
+       20.3. Profile header mobile
+       ================================ */
+
+       .profile-page .profile-page-container {
+        padding-top: clamp(2rem, 4vmax, 70px);
+        padding-bottom: clamp(2rem, 4vmax, 70px);
+    }
+
+       .profile-header-mobile{
+        display: none;
+       }
+
+@media (max-width: 800px) {
+    .profile-header-section {
+        display: none;
+    }
+
+    .profile-header-mobile {
+        display: block;
+    }
+
+    .profile-header-mobile .about-author-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -40px;
+        margin-bottom: 30px;
+    }
+
+    .profile-header-mobile .about-author-section > * {
+        justify-content: center;
+    }
+
+    .profile-author-info .download-file {
+        display: none;
+    }
+
+    .profile-header-mobile .about-author-section .profile-header-user-profile {
+        margin-bottom: 30px;
+    }
+
+    .profile-header-mobile .follow-container .more-link-wrapper {
+        margin-right: 10px;
+    }
+
+    .profile-header-mobile .follow-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .more-link {
+        width: 48px;
+        height: 36px;
+    }
+
+    .profile-header-mobile .more-link-wrapper .more-link {
+        margin: 0 auto;
+    }
+
+    .profile-header-mobile .follow-box button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .profile-header-mobile .profile-header-user-profile {
+        margin-top: 0;
+    }
+
+    .profile-header-mobile .profile-header-user-profile .avatar {
+        border: 8px solid var(--body-background);
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-header-mobile .social-icons-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .profile-header-mobile .profile-author-info .author-meta {
+        font-size: var(--body-font-size);
+        line-height: 1;
+    }
+
+    .profile-header-mobile .social-icons-list .social-icon {
+        margin-right: 8px;
+        margin-bottom: 10px;
+    }
+
+    .profile-header-mobile .social-icons-list .social-icon:last-child {
+        margin-right: 0;
+    }
+
+    .profile-header-mobile .author-primary-info {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin-bottom: 0;
+    }
+
+    .profile-header-mobile .author-primary-info .activity-meta {
+        flex-basis:100%;
+        justify-content: space-around;
+    }
+
+    .profile-header-mobile .author-primary-info .activity-meta > * {
+        text-align: center;
+    }
+}
+
+
+
+
+
+/* ================================
+       20.2. About author
+       ================================ */
+
+.about-author-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about-author-wrapper > * {
+    flex: 0 1 33%;
+    margin-right: clamp(1rem, 5vmax, 100px);
+}
+
+.about-author-wrapper > div:last-child {
+    margin-right: 0;
+}
+
+@media(max-width: 1024px) {
+    .about-author-wrapper {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .about-author-wrapper > * {
+        flex: 0 0 48%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .about-author-wrapper > * {
+        flex: 0 0 100%;
+    }
+}

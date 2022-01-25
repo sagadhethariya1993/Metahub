@@ -1,0 +1,68 @@
+
+/* ================================
+       14.1. Recent posts widget
+       ================================ */
+
+       .recent-posts-widget-item {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    
+    .recent-posts-widget-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .recent-posts-widget-item-img {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+        border-radius: 20px;
+        border: 1px solid var(--border-color);
+        margin-right: 15px;
+    }
+    
+    .recent-posts-widget-item-img img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+    
+    .recent-posts-widget-item-tags {
+        margin-bottom: 8px;
+    }
+    
+    .recent-posts-widget-item-tags .tag-item {
+        font-size: 10px;
+        line-height: 1;
+        font-weight: var(--heading-font-weight);
+        padding: 5px 8px;
+        border: 1px solid var(--border-color);
+        border-radius: 30px;
+    }
+    
+    .recent-posts-widget-item-tags .tag-item + .tag-item {
+        margin-left: 4px;
+    }
+    
+    .recent-posts-widget-item-title {
+        font-size: var(--body-font-size);
+        font-weight: var(--heading-font-weight);
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+    
+    .recent-posts-widget-item-title a:hover {
+        color: inherit;
+    }
+    
+    .recent-posts-widget-item-meta {
+        font-size: 12px;
+        font-weight: var(--body-font-weight);
+        line-height: 1;
+    }
+    
+    .recent-posts-widget-item-meta a {
+        color: var(--primary-accent-color);
+    }
+    

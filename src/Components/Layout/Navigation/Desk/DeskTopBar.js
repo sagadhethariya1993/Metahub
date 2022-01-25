@@ -1,9 +1,9 @@
 import {Ux} from '../../../Elements/HOC'
 import { Logo } from '../../../Elements/Logos/Logo';
-import { SearchBox } from '../../../UI/Forms/SearchBar/SearchBox';
+import { SearchBox } from '../../../UI';
 import { ActivityButtons } from '../ActivityButtons';
 import './DeskTopBar.css'
-
+import { NavLink } from 'react-router-dom';
 export const DeskTopBar=()=>{
 
 
@@ -12,8 +12,8 @@ export const DeskTopBar=()=>{
         <Logo/>
         <SearchBox/>
         <div className="collection-box">
-            <a className="btn btn-normal btn-dark create-collection waves-effect waves-button waves-float waves-light">Create</a>
-            <div className="collection-title"><a>My Collection<span className="count colored">12</span></a></div>
+            <NavLink to="/" className="btn btn-normal btn-dark create-collection waves-effect waves-button waves-float waves-light">Create</NavLink>
+            <div className="collection-title"><NavLink to="/">My Collection<span className="count colored">12</span></NavLink></div>
         </div>
         <ActivityButtons/>
     </Ux>

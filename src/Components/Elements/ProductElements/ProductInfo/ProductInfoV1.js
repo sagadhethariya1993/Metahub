@@ -3,7 +3,7 @@ import { Tabs } from '../../../UI';
 import { Avatar42 } from '../../Avatars';
 import { ProductCardV2 } from '../../Cards';
 import './ProductInfo.css'
-
+import { NavLink } from 'react-router-dom';
 
 
 export const ProductInfoV1=()=>{
@@ -21,7 +21,7 @@ export const ProductInfoV1=()=>{
               <div className="avatar-meta">
                 <div className="avatar-title">
                     <span className="gradient-text">
-                        <a href="08-profile-page.html">Dexter Stark</a>
+                        <NavLink to="/profile">Dexter Stark</NavLink>
                     </span>
                 </div>
                 <div className="avatar-meta">@DexterStark</div>
@@ -59,24 +59,24 @@ export const ProductInfoV1=()=>{
               <div className="product-fav-counter">
                   <Heart/><span className="count">105</span>
               </div>
-              <div className="more-link"><a href="#">
+              <div className="more-link"><NavLink to="/">
                   <ThreeDots/>
-                </a>
+                </NavLink>
               </div>
               <div className="social-share-box">
                 <div className="share-icons">
-                  <a href="#">
+                  <NavLink to="/">
                     <Link/>
-                  </a>
-                  <a href="#">
+                  </NavLink>
+                  <NavLink to="/">
                     <Facebook/>
-                  </a>
-                  <a href="#">
+                  </NavLink>
+                  <NavLink to="/">
                     <Twitter/>
-                  </a>
-                  <a href="">
+                  </NavLink>
+                  <NavLink to="/">
                     <Instagram/>
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>

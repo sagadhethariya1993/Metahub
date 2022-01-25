@@ -1,0 +1,8 @@
+.tabs-list .swiper-wrapper{
+    justify-content: center;
+}
+@media (max-width: 800px){
+    .tabs-list li {
+        margin-right: 0px !important;
+    }
+}

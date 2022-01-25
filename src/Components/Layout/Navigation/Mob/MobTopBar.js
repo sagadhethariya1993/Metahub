@@ -4,7 +4,7 @@ import './MobTopBar.css'
 import { List } from 'react-bootstrap-icons';
 import { MobPanel } from './MobPanel';
 import { useState } from 'react';
-
+import { NavLink } from 'react-router-dom';
 export const MobTopBar=()=>{
     const [pannelOpen, setPannelOpen] = useState('')
 
@@ -15,10 +15,10 @@ export const MobTopBar=()=>{
           </div>
         
         <div className="logo ">
-            <a className="logo-link" href="01-index.html">
+            <NavLink className="logo-link" to="/">
                 <div className="logo-img"><img src="svg/cryptoki-logo.svg" alt="logo"/></div>
                 <div className="logo-text">Cryptoki</div>
-            </a>
+            </NavLink>
         </div>
         
         <ActivityButtons/>

@@ -1,0 +1,22 @@
+/* ================================
+       14.2. Categories Widget
+       ================================ */
+
+       .categories-widget-item {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: var(--heading-font-weight);
+        line-height: 1;
+        padding: 10px 14px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--btn-border-radius);
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .categories-widget-item:hover {
+        color: var(--contrast-text-color);
+        background: var(--cryptoki-gradient);
+        border: none;
+        padding: 11px 15px;
+    }

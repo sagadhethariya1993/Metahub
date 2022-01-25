@@ -1,7 +1,7 @@
 import { Facebook, Heart, Instagram, Twitch } from 'react-bootstrap-icons';
 import { Avatar42 } from '../../../Avatars';
 import './ProductCardV4.css'
-
+import { NavLink } from 'react-router-dom';
 
 
 export const ProductCardV4=()=>{
@@ -14,11 +14,11 @@ export const ProductCardV4=()=>{
               <div className="featured-item-content">
                 <div className="fav-counter"><Heart/><span className="count">22</span></div>
                 <div className="featured-item-image">
-                  <a href="05-product-page.html"><img src={require("../../../../../assets/Images/content/items/featured-item-1.png")} alt=""/></a>
+                  <NavLink to="/productv1"><img src={require("../../../../../assets/Images/content/items/featured-item-1.png")} alt=""/></NavLink>
                 </div>
                 <div className="featured-item-author">
-                  <div className="title"><a href="05-product-page.html">The Molten Heart</a></div>
-                  <div className="item-meta"><span className="gradient-text"><a href="08-profile-page.html">@DexterStark</a></span></div>
+                  <div className="title"><NavLink to="/productv1">The Molten Heart</NavLink></div>
+                  <div className="item-meta"><span className="gradient-text"><NavLink to="/profile">@DexterStark</NavLink></span></div>
                 </div>
                 <Avatar42/>
                 <div className="featured-bidding-section">
@@ -41,15 +41,15 @@ export const ProductCardV4=()=>{
                 <div className="social-share-box">
                   <div className="social-caption">Share</div>
                   <div className="share-icons">
-                    <a href="#">
+                    <NavLink to="/">
                       <Facebook/>
-                    </a>
-                    <a href="#">
+                    </NavLink>
+                    <NavLink to="/">
                         <Twitch/>
-                    </a>
-                    <a href="">
+                    </NavLink>
+                    <NavLink to="/">
                         <Instagram/>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>

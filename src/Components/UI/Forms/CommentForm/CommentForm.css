@@ -1,0 +1,244 @@
+
+.comments-list + .leave-comment,
+.reviews-list + .leave-review {
+    margin-top: 60px;
+}
+
+.leave-comment h5,
+.leave-review h5 {
+    margin-bottom: clamp(1rem, 3.1vmax, 50px);
+}
+#comment-form .btn {
+    float: right;
+}
+@media (max-width: 600px) {
+    .widget-filter-panel.notifications {
+        max-width: 100%;
+    }
+
+    .widget-filter-panel.notifications #filter-form {
+        margin-right: 0;
+    }
+
+    .widget-filter-panel.notifications #filter-form .form-group {
+        flex-direction: row;
+        justify-content: flex-start;}
+
+    .widget-filter-panel.notifications #filter-form .form-group .small-title {
+        flex-basis: 100%;
+    }
+
+    .widget-filter-panel.notifications #filter-form .form-group .form-list-elem {
+        margin-right: 10px;
+    }
+}
+
+/* ================================
+       12. CRYPTOKI FORM
+       ================================ */
+
+       .form-title {
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: var(--heading-font-weight);
+        margin-bottom:20px;
+    }
+    
+    .form-description .form-title + .description {
+        margin-top: 40px;
+    }
+    
+    .form-description + .cryptoki-form {
+        margin-top: 50px;
+    }
+    
+    .form-list-wrapper {
+        display: inline-flex;
+        flex-flow: column nowrap;
+    }
+    
+    .form-group {
+        margin-bottom: 40px;
+    }
+    
+    .form-group:last-child {
+        margin-bottom: 0;
+    }
+    
+    .form-list-elem {
+        font-weight: var(--heading-font-weight);
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+    
+    .form-list-elem:last-child {
+        margin-bottom: 0;
+    }
+    
+    .cryptoki-form input,
+    .cryptoki-form textarea {
+        font-size: var(--body-font-size);
+        font-weight: var(--heading-font-weight);
+        background-color: var(--body-background);
+        color: var(--main-font-color);
+    }
+    
+    .cryptoki-form input[type="text"],
+    .cryptoki-form input[type="number"],
+    .cryptoki-form input[type="email"],
+    .cryptoki-form input[type="button"],
+    .cryptoki-form input[type="password"],
+    .cryptoki-form input[type="url"],
+    .cryptoki-form input[type="submit"],
+    .cryptoki-form input[type="reset"],
+    .cryptoki-form select,
+    .cryptoki-form .select-nice {
+        padding: max(0.87vw, 12px) max(1.5vw, 18px);
+        border: 1px solid var(--border-color);
+        background-color: var(--body-background);
+        color: var(--main-font-color);
+        border-radius: var(--input-border-radius);
+        margin-bottom: 20px;
+        position: relative;
+    }
+    
+    .cryptoki-form input[type="button"],
+    .cryptoki-form input[type="submit"] {
+        cursor: pointer;
+    }
+    
+    .cryptoki-form input:focus,
+    .cryptoki-form select:focus,
+    .cryptoki-form textarea:focus {
+        outline: none;
+        border:1px solid var(--primary-accent-color);
+    }
+    
+    .cryptoki-form .price-range {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .cryptoki-form .price-range input {
+        float: left;
+        width: 48%;
+        margin-right: 15px;
+    }
+    
+    .cryptoki-form .price-range input:last-child {
+        margin-right: 0;
+    }
+    
+    
+    .cryptoki-form input[type="button"],
+    .cryptoki-form button {
+        background-color: var(--main-font-color);
+        color: var(--contrast-text-color);
+    }
+    
+    .cryptoki-form input[type="button"]:focus,
+    .cryptoki-form button:focus {
+        box-shadow: 0 0 10px 2px var(--main-font-color);
+    }
+    
+    .cryptoki-form button:disabled {
+        background-color: var(--light-gray);
+        color: var(--inactive-text-color);
+        cursor: default;
+    }
+    
+    .cryptoki-form input[type="reset"] {
+        border: none;
+        color:var(--inactive-text-color);
+        padding: 0;
+        margin: 0;
+    }
+    
+    .cryptoki-form textarea {
+        padding: 30px;
+        border: 1px solid var(--border-color);
+        border-radius: 25px;
+    }
+    
+    .digital-store .cryptoki-form textarea {
+        border-radius: 15px;
+    }
+    
+    .cryptoki-form .form-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    
+    .cryptoki-form .form-field {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .form-group > .form-field {
+        margin-right: 20px;
+    }
+    
+    
+    .cryptoki-form .form-group > .form-field {
+        margin-bottom: 0;
+    }
+    
+    .cryptoki-form .form-group:last-of-type > .form-field input {
+        margin-bottom: 0;
+    }
+    
+    .cryptoki-form .form-group:last-of-type > .form-field label {
+        margin-top: 20px;
+    }
+    
+    .cryptoki-form input::placeholder {
+        color: var(--inactive-text-color);
+    }
+    
+    .form-field:only-child,
+    .form-field:last-child {
+        margin-right: 0;
+    }
+    
+    .cryptoki-form .form-field label,
+    .cryptoki-form .label {
+        font-size: var(--body-font-size);
+        font-weight: var(--heading-font-weight);
+        text-transform: capitalize;
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+    
+    .cryptoki-form .form-field + button,
+    .cryptoki-form .form-group + button,
+    .cryptoki-form .form-field + input[type="button"],
+    .cryptoki-form .form-group + input[type="button"],
+    .cryptoki-form .form-field + input[type="submit"],
+    .cryptoki-form .form-group + input[type="submit"] {
+        margin-top: 30px;
+    }
+    
+    .cryptoki-form .register-notice {
+        margin-top: 10px;
+    }
+    
+    #personal-info-form .nice-select-dropdown {
+        width: 100%;
+    }
+    
+    @media(max-width: 1024px) {
+        .is-two-col-element .form-list-wrapper {
+            margin-bottom: 20px;
+        }
+    
+        .cryptoki-form .form-group {
+            flex-wrap: wrap;
+        }
+    
+        .form-group > .form-field {
+            margin-right: 0;
+        }
+    }

@@ -1,6 +1,6 @@
 import './SearchBox.css'
 import {ChevronDown,ChevronUp, Search} from 'react-bootstrap-icons'
-import { useState ,useEffect} from 'react';
+import { useState} from 'react';
 import { SearchDropDown } from '../../DropDowns/SearchDropDown/SearchDropDown';
 
 export const SearchBox=()=>{

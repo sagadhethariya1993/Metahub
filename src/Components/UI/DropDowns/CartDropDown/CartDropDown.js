@@ -1,5 +1,5 @@
 import './CartDropDown.css'
-
+import { NavLink } from 'react-router-dom';
 
 export const CartDropDown=()=>{
 
@@ -12,15 +12,15 @@ export const CartDropDown=()=>{
                 <div className="cart-wrapper">
                   <div className="cart-product">
                     <div className="thumb-box">
-                      <a href="05-product-page.html">
+                      <NavLink to="/productv1">
                         <img src="img/content/notifications/notif-thumb-1.png" width="50" height="50" alt="UI templates" loading="lazy"/>
-                      </a>
+                      </NavLink>
                     </div>
                     <div className="purchase-info">
                       <div className="product-info">
                         <div className="product-title">
-                          <a href="05-product-page.html">Cryptoki NFT and Digital Market PSD
-                            Template</a>
+                          <NavLink to="/productv1">Cryptoki NFT and Digital Market PSD
+                            Template</NavLink>
                         </div>
                         <div className="product-price">$12.00</div>
                       </div>
@@ -29,11 +29,11 @@ export const CartDropDown=()=>{
                   </div>
                   <div className="cart-product">
                     <div className="thumb-box">
-                      <a href="06-product-page-v2.html"><img src="img/content/notifications/notif-thumb-2.png" width="50" height="50" alt="Social graphics" loading="lazy"/></a>
+                      <NavLink to="/productv2"><img src="img/content/notifications/notif-thumb-2.png" width="50" height="50" alt="Social graphics" loading="lazy"/></NavLink>
                     </div>
                     <div className="purchase-info">
                       <div className="product-info">
-                        <div className="product-title"><a href="06-product-page-v2.html">Twitter Gaming Headers Pack 04</a>
+                        <div className="product-title"><NavLink to="/productv2">Twitter Gaming Headers Pack 04</NavLink>
                         </div>
                         <div className="product-price">$40.00</div>
                       </div>
@@ -42,12 +42,12 @@ export const CartDropDown=()=>{
                   </div>
                   <div className="cart-product">
                     <div className="thumb-box">
-                      <a href="07-product-page-v3.html"><img src="img/content/notifications/notif-thumb-3.png" width="50" height="50" alt="Coded templates" loading="lazy"/></a>
+                      <NavLink to="/productv3"><img src="img/content/notifications/notif-thumb-3.png" width="50" height="50" alt="Coded templates" loading="lazy"/></NavLink>
                     </div>
                     <div className="purchase-info">
                       <div className="product-info">
-                        <div className="product-title"><a href="07-product-page-v3.html">Olympus WP - Social Networking
-                            Theme</a></div>
+                        <div className="product-title"><NavLink to="/productv3">Olympus WP - Social Networking
+                            Theme</NavLink></div>
                         <div className="product-price">$68.00</div>
                       </div>
                       <div className="product-type coded-templates">Coded templates</div>
@@ -60,8 +60,8 @@ export const CartDropDown=()=>{
                   <div className="price">$120.00</div>
                 </div>
                 <div className="cart-buttons">
-                  <a href="27-shopping-cart.html" className="btn-small gradient-background btn-square">Go to Cart</a>
-                  <a href="28-checkout.html" className="btn-small btn-dark btn-square waves-effect waves-button waves-float waves-light">Checkout</a>
+                  <NavLink to="27-shopping-cart.html" className="btn-small gradient-background btn-square">Go to Cart</NavLink>
+                  <NavLink to="28-checkout.html" className="btn-small btn-dark btn-square waves-effect waves-button waves-float waves-light">Checkout</NavLink>
                 </div>
               </div>
     );

@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 import { SectionPadding,Grids } from "../../../Elements/HOC";
-
+import { NavLink } from 'react-router-dom';
 import './NewestItems.css'
 import { ProductCard } from "../../../Elements/Cards";
 import { HoverButton } from "../../../UI";
@@ -13,13 +13,13 @@ export const NewestItems=()=>{
             <SectionPadding margin>
                 <div className="section-title-wrapper">
                     <div className="section-title"><span className="gradient-text">Newest</span> Items</div>
-                    <div className="all-items-link"><a href="02-explore.html">Explore all Artworks</a></div>
+                    <div className="all-items-link"><NavLink to="/explore">Explore all Artworks</NavLink></div>
                 </div>
                     <div className="featured-box ">
                         <div className="featured-box-wrapper grid-4-columns">
                             <Grids col={4}>
                                 {
-                                    items.map((text,i)=>(
+                                    items.map((i)=>(
                                         <ProductCard key={i}/>
                                     ))
                                 }

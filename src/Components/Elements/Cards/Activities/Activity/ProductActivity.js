@@ -1,6 +1,6 @@
 import { Avatar42 } from '../../../Avatars';
 import './Activity.css'
-
+import { NavLink } from 'react-router-dom';
 
 
 export const ProductActivity=()=>{
@@ -14,7 +14,7 @@ export const ProductActivity=()=>{
               <Avatar42/>
               <div className="bid-info">
                 <div className="bid-title"><span className="gradient-text">
-                    <a href="08-profile-page.html">Dexter Stark</a></span> sold
+                    <NavLink to="/profile">Dexter Stark</NavLink></span> sold
                 </div>
                 <div className="bid-date">53 minutes ago</div>
               </div>

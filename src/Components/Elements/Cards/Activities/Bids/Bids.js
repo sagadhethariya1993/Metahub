@@ -1,6 +1,6 @@
 import { Avatar42 } from '../../../Avatars';
 import './Bids.css'
-
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -14,8 +14,8 @@ export const Bids=()=>{
             <div className="bid-placer">
               <Avatar42/>
               <div className="bid-info">
-                <div className="bid-title">Bid placed by <span className="gradient-text"><a href="08-profile-page.html">Jenn
-                      Art</a></span></div>
+                <div className="bid-title">Bid placed by <span className="gradient-text"><NavLink to="/profile">Jenn
+                      Art</NavLink></span></div>
                 <div className="bid-date">03/25/2021 at 12:19pm</div>
               </div>
             </div>

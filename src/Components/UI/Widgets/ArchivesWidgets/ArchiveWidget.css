@@ -1,0 +1,14 @@
+/* ================================
+       14.3. Archives Widget
+       ================================ */
+
+       .archives-widget-list .archive-item {
+        font-size: var(--body-font-size);
+        font-weight: var(--heading-font-weight);
+        line-height: 2.75;
+    }
+    
+    .archives-widget-list .archive-item a + span {
+        margin-left: 4px;
+    }
+    

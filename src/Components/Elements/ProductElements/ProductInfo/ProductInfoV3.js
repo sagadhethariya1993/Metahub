@@ -1,7 +1,7 @@
 import { Dot } from 'react-bootstrap-icons';
 import { Avatar42 } from '../../Avatars';
 import './ProductInfo.css'
-
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -15,8 +15,8 @@ export const ProductInfoV3=()=>{
             <div className="product-author avatar-block">
               <Avatar42/>
               <div className="avatar-meta">
-                <div className="avatar-title"><span className="gradient-text"><a href="08-profile-page.html">Dexter
-                      Stark</a></span></div>
+                <div className="avatar-title"><span className="gradient-text"><NavLink to="/profile">Dexter
+                      Stark</NavLink></span></div>
                 <div className="avatar-meta">@DexterStark</div>
               </div>
             </div>

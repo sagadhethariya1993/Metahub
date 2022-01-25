@@ -1,7 +1,7 @@
 import './CreatorDetailCard.css'
 import {Avatar64} from '../../../Avatars'
 import { Facebook, Instagram, Link, ThreeDots, Twitch, Twitter } from 'react-bootstrap-icons';
-
+import { NavLink } from 'react-router-dom';
 
 
 export const CreatorDetailCard=()=>{
@@ -16,7 +16,7 @@ export const CreatorDetailCard=()=>{
             <div className="creator-info-wrapper">
               <div className="creator-info">
                 <Avatar64/>
-                <div className="title"><a href="08-profile-page.html">Dexter Stark</a></div>
+                <div className="title"><NavLink to="/profile">Dexter Stark</NavLink></div>
                 <div className="item-meta"><span className="gradient-text">@DexterStark</span></div>
               </div>
               <div className="follow-me">
@@ -24,11 +24,11 @@ export const CreatorDetailCard=()=>{
               </div>
             </div>
             <ul className="social-icons-list">
-              <li className="social-icon icon-border"><a href="#"><Link/></a></li>
-              <li className="social-icon icon-border"><a href="#"><Facebook/></a></li>
-              <li className="social-icon icon-border"><a href="#"><Twitter/></a></li>
-              <li className="social-icon icon-border"><a href="#"><Instagram/></a></li>
-              <li className="social-icon icon-border"><a href="#"><Twitch/></a></li>
+              <li className="social-icon icon-border"><NavLink to="/"><Link/></NavLink></li>
+              <li className="social-icon icon-border"><NavLink to="/"><Facebook/></NavLink></li>
+              <li className="social-icon icon-border"><NavLink to="/"><Twitter/></NavLink></li>
+              <li className="social-icon icon-border"><NavLink to="/"><Instagram/></NavLink></li>
+              <li className="social-icon icon-border"><NavLink to="/"><Twitch/></NavLink></li>
             </ul>
             <div className="about-creator">
               <p>I am a self-taught digital artist who specializes in 3d art and motion graphics. Most of
@@ -36,12 +36,12 @@ export const CreatorDetailCard=()=>{
               </p>
             </div>
             <div className="projects-previews">
-              <div className="preview-box"><a href="07-product-page-v3.html"><img src={require("../../../../../assets/Images/content/previews/project-thumb-1.png")} alt=""/></a></div>
-              <div className="preview-box"><a href="07-product-page-v3.html"><img src={require("../../../../../assets/Images/content/previews/project-thumb-2.png")} alt=""/></a></div>
-              <div className="preview-box"><a href="07-product-page-v3.html"><img src={require("../../../../../assets/Images/content/previews/project-thumb-21.png")} alt=""/></a></div>
-              <div className="preview-box more-projects"><a href="08-profile-page.html">
+              <div className="preview-box"><NavLink to="/productv3"><img src={require("../../../../../assets/Images/content/previews/project-thumb-1.png")} alt=""/></NavLink></div>
+              <div className="preview-box"><NavLink to="/productv3"><img src={require("../../../../../assets/Images/content/previews/project-thumb-2.png")} alt=""/></NavLink></div>
+              <div className="preview-box"><NavLink to="/productv3"><img src={require("../../../../../assets/Images/content/previews/project-thumb-21.png")} alt=""/></NavLink></div>
+              <div className="preview-box more-projects"><NavLink to="/profile">
                   <ThreeDots/>
-                  </a></div>
+                  </NavLink></div>
             </div>
           </div>
           <div className="creator-stats">

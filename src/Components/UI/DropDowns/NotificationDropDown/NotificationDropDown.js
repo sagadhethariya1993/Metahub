@@ -1,6 +1,6 @@
 import './NotificationDropDown.css';
 import { Chat } from 'react-bootstrap-icons';
-
+import { NavLink } from 'react-router-dom';
 
 export const NotificationDropDown=()=>{
 
@@ -17,8 +17,8 @@ export const NotificationDropDown=()=>{
             </div>
             <div className="notification-info">
               <div className="message">
-                <a href="08-profile-page.html" className="bold">@JackieJ</a> just commented on <a href="05-product-page.html" className="bold">Cryptoki NFT
-                  and Digital Market PSD Template</a>
+                <NavLink to="/profile" className="bold">@JackieJ</NavLink> just commented on <NavLink to="/productv1" className="bold">Cryptoki NFT
+                  and Digital Market PSD Template</NavLink>
               </div>
               <div className="publish-date">2 minutes ago</div>
             </div>
@@ -33,8 +33,8 @@ export const NotificationDropDown=()=>{
             </div>
             <div className="notification-info">
               <div className="message">
-                <a href="08-profile-page.html" className="bold">@CrimsonRay</a> just purchased<a href="06-product-page-v2.html" className="bold"> Cryptoki NFT
-                  and Digital Market PSD Template</a>
+                <NavLink to="/profile" className="bold">@CrimsonRay</NavLink> just purchased<NavLink to="/productv2" className="bold"> Cryptoki NFT
+                  and Digital Market PSD Template</NavLink>
               </div>
               <div className="publish-date">10 minutes ago</div>
             </div>
@@ -46,8 +46,8 @@ export const NotificationDropDown=()=>{
             </div>
             <div className="notification-info">
               <div className="message">
-                <a href="08-profile-page.html" className="bold">@NoirArtks</a> just liked<a href="07-product-page-v3.html" className="bold">Twitter Gaming
-                  Headers Pack 04</a>
+                <NavLink to="/profile" className="bold">@NoirArtks</NavLink> just liked<NavLink to="/productv3" className="bold">Twitter Gaming
+                  Headers Pack 04</NavLink>
               </div>
               <div className="publish-date">37 minutes ago</div>
             </div>
@@ -60,15 +60,15 @@ export const NotificationDropDown=()=>{
               </span>
             </div>
             <div className="notification-info">
-              <div className="message"><a href="08-profile-page.html" className="bold">@CrimsonRay</a> just reviewed
-                <a href="05-product-page.html" className="bold">Cryptoki NFT and Digital Market PSD Template</a>
+              <div className="message"><NavLink to="/profile" className="bold">@CrimsonRay</NavLink> just reviewed
+                <NavLink to="/productv1" className="bold">Cryptoki NFT and Digital Market PSD Template</NavLink>
               </div>
               <div className="publish-date">49 minutes ago</div>
             </div>
           </div>
         </div>
-        <a href="25-notifications.html" className="btn-small-fullwidth btn-dark btn-square waves-effect waves-button waves-float waves-light">View all
-          Notifications</a>
+        <NavLink to="25-notifications.html" className="btn-small-fullwidth btn-dark btn-square waves-effect waves-button waves-float waves-light">View all
+          Notifications</NavLink>
       </div>
     );
 }

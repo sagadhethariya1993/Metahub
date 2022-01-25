@@ -470,6 +470,14 @@ ul {
     .no-top-padding {
         padding-top: 0 !important;
     }
+    .NotFound{
+        display: table-cell;
+        vertical-align: middle;
+        margin: 2em auto;
+        text-align: center;
+        height: 70vh;
+        width: 100vw;
+    }
        @media (max-width: 600px) {
            .section-medium,
            .section-small,

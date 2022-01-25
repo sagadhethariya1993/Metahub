@@ -1,31 +1,35 @@
 import './NewsCard.css'
-import { ChevronRight } from 'react-bootstrap-icons';
-import img from '../../../../assets/Images/Facebook.PNG'
+import { NavLink } from 'react-router-dom';
+import { ChevronRight, MusicNote, PlayFill } from 'react-bootstrap-icons';
 
-export const NewsCard=()=>{
+export const NewsCard=({video=false,music=false,nothumb=true,classic=false})=>{
 
     return(
-        <div className="news-item">
-            <div className="news-thumb">
-              <a href="14-blog-post-centered.html">
-                <img src={img} width="460" height="260" alt="" loading="lazy"/></a>
-            </div>
+        <div className={classic?"news-item-classic":"news-item"}>
+          { nothumb?<div className="news-thumb">
+            {video?<NavLink className="post-format-icon" data-fslightbox="" data-type="youtube" to="/"><PlayFill/></NavLink>:null}
+            {music?<NavLink className="post-format-icon" data-fslightbox="lightbox" to="/audio-iframe"><MusicNote/></NavLink>:null}
+           
+              <NavLink to="/blogpostcentered">
+                <img src={require('../../../../assets/Images/content/latest-news/news-thumb7.png')} width="460" height="260" alt="" loading="lazy"/>
+              </NavLink>
+            </div>:null}
             <div className="news-content">
               <div className="news-meta">
-                <div className="news-tags">
-                  <span className="tag-item"><a>Guides</a></span>
-                  <span className="tag-item"><a>News</a></span>
+                <div className={nothumb?"news-tags":"news-tags news-mb"}>
+                  <span className="tag-item"><NavLink to="/">Guides</NavLink></span>
+                  <span className="tag-item"><NavLink to="/">News</NavLink></span>
                 </div>
-                by <a href="08-profile-page.html">Cryptoki</a>, March 26th, 2021
+                by <NavLink to="/profile">Cryptoki</NavLink>, March 26th, 2021
               </div>
-              <div className="news-title h5"><a href="15-blog-post-sidebar.html">We explain with details everything you need
+              <div className="news-title h5"><NavLink to="/blogpostslidebar">We explain with details everything you need
                   to know
                   about crypto art and
-                  cryptocurrencies!</a></div>
+                  cryptocurrencies!</NavLink></div>
               <div className="news-excerpt">A cryptocurrency is a digital asset designed to work as a medium of exchange
                 wherein individual coin ownership records...</div>
               <div className="read-more-link">
-                <a href="14-blog-post-centered.html">Read More<ChevronRight/></a>
+                <NavLink to="/blogpostcentered">Read More<ChevronRight/></NavLink>
               </div>
             </div>
           </div>

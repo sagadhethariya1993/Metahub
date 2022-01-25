@@ -1,6 +1,6 @@
 import './FeaturedCreatorCard.css'
 import { Facebook,Instagram,Twitter, Link, Twitch,ThreeDots } from 'react-bootstrap-icons';
-
+import { NavLink } from 'react-router-dom';
 import img from '../../../../assets/Images/Facebook.PNG'
 import {Button} from '../../../UI'
 import { ItemMeta } from '../../UserMeta/ItemMeta';
@@ -15,7 +15,7 @@ export const FeaturedCreatorCard=()=>{
             <div className="featured-creators-wrapper">
               <div className="featured-creators-info-wrapper">
                 <div className="featured-creators-info">
-                  <div className="title h4"><a href="08-profile-page.html">Dexter Stark</a></div>
+                  <div className="title h4"><NavLink to="/profile">Dexter Stark</NavLink></div>
                   <ItemMeta/>
                 </div>
                 <div className="follow-me gradient-border_white-bg">
@@ -23,11 +23,11 @@ export const FeaturedCreatorCard=()=>{
                 </div>
               </div>
               <ul className="social-icons-list">
-                <li className="social-icon icon-border"><a href="#"><Link/></a></li>
-                <li className="social-icon icon-border"><a href="#"><Facebook/></a></li>
-                <li className="social-icon icon-border"><a href="#"><Twitter/></a></li>
-                <li className="social-icon icon-border"><a href="#"><Instagram/></a></li>
-                <li className="social-icon icon-border"><a href="#"><Twitch/></a></li>
+                <li className="social-icon icon-border"><NavLink to="/"><Link/></NavLink></li>
+                <li className="social-icon icon-border"><NavLink to="/"><Facebook/></NavLink></li>
+                <li className="social-icon icon-border"><NavLink to="/"><Twitter/></NavLink></li>
+                <li className="social-icon icon-border"><NavLink to="/"><Instagram/></NavLink></li>
+                <li className="social-icon icon-border"><NavLink to="/"><Twitch/></NavLink></li>
               </ul>
               <div className="about-creator">
                 <p>I’m a graphic designer and illustrator from Mexico City. Since 2 years ago I specialize on big mural
@@ -53,21 +53,21 @@ export const FeaturedCreatorCard=()=>{
               </div>
               <div className="projects-previews">
                 <div className="preview-box">
-                  <a href="05-product-page.html">
+                  <NavLink to="/productv1">
                     <img src={img} width="68" height="68" alt="" loading="lazy"/>
-                  </a>
+                  </NavLink>
                 </div>
                 <div className="preview-box">
-                  <a href="06-product-page-v2.html"><img src={img} height="66" width="66" alt="" loading="lazy" /></a>
+                  <NavLink to="/productv2"><img src={img} height="66" width="66" alt="" loading="lazy" /></NavLink>
                 </div>
                 <div className="preview-box">
-                  <a href="07-product-page-v3.html"><img src={img} width="68" height="68" alt="" loading="lazy" /></a>
+                  <NavLink to="/productv3"><img src={img} width="68" height="68" alt="" loading="lazy" /></NavLink>
                 </div>
                 <div className="preview-box">
-                  <a href="05-product-page.html"><img src={img} height="50" width="50" alt="" loading="lazy" /></a>
+                  <NavLink to="/productv1"><img src={img} height="50" width="50" alt="" loading="lazy" /></NavLink>
                 </div>
                 <div className="preview-box more-projects">
-                  <a href="08-profile-page.html"><ThreeDots/></a>
+                  <NavLink to="/profile"><ThreeDots/></NavLink>
                 </div>
               </div>
             </div>

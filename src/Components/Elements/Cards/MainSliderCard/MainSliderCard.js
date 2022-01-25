@@ -20,7 +20,7 @@ export const MainSliderCard=()=>{
         <Ux>
         <div className='overlay'></div>
                 <picture>
-                    <source type="image/avif" srcset={require('../../../../assets/avif/content/slider/slider-img-3.avif')}/>
+                    <source type="image/avif" src={require('../../../../assets/avif/content/slider/slider-img-3.avif')}/>
                     <img src={require('../../../../assets/Images/content/slider/slider-img-3.png')} alt='SliderImg'/>
                 </picture>
                 <div className='slide-content'>

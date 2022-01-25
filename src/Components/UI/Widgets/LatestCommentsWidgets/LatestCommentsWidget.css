@@ -1,0 +1,22 @@
+/* ================================
+       14.4. Latest Comments Widget
+       ================================ */
+
+       .latest-comments-widget-list .comment-item {
+        font-size: var(--body-font-size);
+        font-weight: var(--body-font-weight);
+        line-height: 1.4;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 20px;
+    }
+    
+    .latest-comments-widget-list .comment-link {
+        font-weight: var(--heading-font-weight);
+    }
+    
+    .latest-comments-widget-list .comment-link:hover{
+        color: inherit;
+    }
+    

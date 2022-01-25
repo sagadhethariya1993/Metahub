@@ -1,7 +1,7 @@
 
 import { ItemMeta } from '../../../UserMeta/ItemMeta'
-
-import {Heart,Clock,Facebook,Twitter,Instagram} from 'react-bootstrap-icons'
+import { NavLink } from 'react-router-dom';
+import {Heart,Facebook,Twitter,Instagram} from 'react-bootstrap-icons'
 
 
 import './ProductCard.css'
@@ -19,16 +19,16 @@ export const ProductCard=()=>{
                         <span className="count">60</span>
                     </div>
                     <div className="featured-item-image">
-                      <a >
+                      <NavLink to="/">
                         <picture>
-                        <source type="image/avif" srcset={require("../../../../../assets/avif/content/items/featured-item-1.avif")}/>
+                        <source type="image/avif" src={require("../../../../../assets/avif/content/items/featured-item-1.avif")}/>
                           <img src={require('../../../../../assets/Images/content/items/featured-item-1.png')} width="304" height="340" loading="lazy" alt="Featured"/>
                         </picture>
-                      </a>
+                      </NavLink>
                     </div>
                     <div className="featured-item-info">
                       <Timer/>
-                      <div className="title"><a >Flow of Planets</a></div>
+                      <div className="title"><NavLink to="/">Flow of Planets</NavLink></div>
                      <ItemMeta title='beardedwndr'/>
                     </div>
                 </div>

@@ -1,0 +1,52 @@
+
+.single-post .post-content {
+    font-size: var(--article-font-size);
+}
+
+.single-post .post-content,
+.single-post .comments-section {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto clamp(1rem, 6vmax, 100px);
+}
+
+.single-post .post-content > * {
+    margin-bottom: clamp(2rem, 4.3vmax, 70px);
+}
+
+.single-post-sidebar .post-content, .single-post-sidebar .comments-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* ================================
+       16.3.3. Post author box
+       ================================ */
+
+       .post-author-box {
+        padding: 30px;
+        background: var(--extra-light-gray);
+        border-radius: 25px;
+        border: 1px solid var(--border-color);
+    }
+    
+    .post-author-box .author-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .post-author-box p {
+        font-size: var(--body-font-size);
+    }
+    
+    @media (max-width: 414px) {
+        .post-author-box .author-heading {
+            flex-wrap: wrap;
+        }
+        .post-author-box .avatar-block {
+            margin-bottom: 20px;
+        }
+    }
+    

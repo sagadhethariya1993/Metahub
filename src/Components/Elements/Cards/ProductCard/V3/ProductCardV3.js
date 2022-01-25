@@ -2,7 +2,7 @@ import { Facebook, Heart, Instagram, Twitter } from 'react-bootstrap-icons';
 import { Timer } from '../../../../UI/Timer/Timer';
 import { Avatar26 } from '../../../Avatars';
 import './ProductCardV3.css'
-
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -14,12 +14,12 @@ export const ProductCardV3=()=>{
             <div className="featured-item-wrapper">
               <div className="featured-item-image-wrapper">
                 <div className="featured-item-image">
-                  <a href="05-product-page.html"><img src={require("../../../../../assets/Images/content/items/featured-item-1.png")} alt=""/></a>
+                  <NavLink to="/productv1"><img src={require("../../../../../assets/Images/content/items/featured-item-1.png")} alt=""/></NavLink>
                 </div>
               </div>
               <Timer/>
               <div className="item-meta-wrapper">
-                <div className="title"><a href="05-product-page.html">The Molten Heart</a></div>
+                <div className="title"><NavLink to="/productv1">The Molten Heart</NavLink></div>
                 <div className="fav-counter"><Heart/><span className="count">22</span></div>
               </div>
 
@@ -30,7 +30,7 @@ export const ProductCardV3=()=>{
                       <Avatar26/>
                       <div className="creator-meta">
                         <div className="creator-label">CREATOR</div>
-                        <div className="creator-name"><a href="08-profile-page.html">Dexter Stark</a></div>
+                        <div className="creator-name"><NavLink to="/profile">Dexter Stark</NavLink></div>
                       </div>
                     </div>
                     <div className="featured-item-pricebox">
@@ -47,7 +47,7 @@ export const ProductCardV3=()=>{
                     <Avatar26/>
                     <div className="creator-meta">
                       <div className="creator-label">BID PLACED BY</div>
-                      <div className="creator-name"><a href="05-product-page.html">Crimson Ray</a></div>
+                      <div className="creator-name"><NavLink to="/productv1">Crimson Ray</NavLink></div>
                     </div>
                   </div>
 
@@ -60,15 +60,15 @@ export const ProductCardV3=()=>{
               <div className="featured-item-post-content">
                 <div className="social-share-box">
                   <div className="share-icons">
-                    <a href="#">
+                    <NavLink to="/">
                       <Facebook/>
-                    </a>
-                    <a href="#">
+                    </NavLink>
+                    <NavLink to="/">
                       <Twitter/>
-                    </a>
-                    <a href="#">
+                    </NavLink>
+                    <NavLink to="/">
                       <Instagram/>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>

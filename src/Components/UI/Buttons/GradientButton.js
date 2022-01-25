@@ -1,5 +1,5 @@
 
-
+import { NavLink } from 'react-router-dom';
 
 export const GradientButton=({children,onClick,background,className=""})=>{
 
@@ -9,9 +9,9 @@ export const GradientButton=({children,onClick,background,className=""})=>{
 
         <button className={"slide-button gradient-border_"+ background+"-bg "+ className}  
         onClick={()=>{onClick()}}>
-            <a className="btn btn-normal waves-effect waves-button waves-float waves-light ">
+            <NavLink className="btn btn-normal waves-effect waves-button waves-float waves-light " to="/">
                 {children}
-            </a>
+            </NavLink>
         </button>
         
     );

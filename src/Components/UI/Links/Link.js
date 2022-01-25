@@ -1,8 +1,9 @@
 import './Link.css'
-
+import { NavLink } from 'react-router-dom';
 
 export const Link=({children,onClick})=>{
     return(
-        <a onClick={()=>{onClick()}}>{children}</a>
+        
+<NavLink onClick={()=>{onClick()}} to="/">{children}</NavLink>
     );
 }
