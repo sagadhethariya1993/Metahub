@@ -1,11 +1,11 @@
 import './Grids.css'
 
-export const Grids=(props)=>{
+export const Grids=({col,children})=>{
 
 
     return(
-        <section className={'grid-'+props.col+'-columns'}>
-            {props.children}
+        <section className={'grid-'+col+'-columns'}>
+            {children}
         </section>
     );
 }
